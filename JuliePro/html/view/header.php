@@ -15,13 +15,13 @@
 ========================================== -->
 <header>
     <div class="wrapper">
-        <img id="logo" class="grille_4" src="img/logo-cinema-quebec.png" alt="Cinéma Québec">
+        <!--<img id="logo" class="grille_4" src="img/logo-cinema-quebec.png" alt="Cinéma Québec"> -->
 
-        <nav class="grille_8">
+        <nav class="grille_12">
             <ul id="menu_header">
-                <li><a class="current" href="#">Accueil</a></li>
+                <li><a class="current" href="../index/index.php">Accueil</a></li>
                 <li><a href="../client_manager">Inscription Client</a></li>
-                <li><a href="../entraineur_manager">Inscription Entraineur</a></li>
+                <li><a href="../entraineur_manager/index.php">Inscription Entraineur</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>

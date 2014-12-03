@@ -1,4 +1,4 @@
-<?php include 'view/header.php'; ?>
+<?php include '../view/header.php'; ?>
 
 <!--  Section PROMO
 ========================================== -->
@@ -6,7 +6,7 @@
 <section>
     <div class="wrapper">
         <figure id="promo_image" class="grille_12">
-            <img src="img/diapo-thor.jpg" alt="Thor : un monde obscur">
+            <img src="../../html/img/diapo-thor.jpg" alt="Thor : un monde obscur">
 
             <figcaption id="promo_caption">
                 <h1>Concours « Entrez dans le monde de Thor »</h1>
@@ -33,7 +33,7 @@
 <section id="intro">
     <div class="wrapper">
         <article class="grille_4">
-            <img src="img/ico-megaphone.png" alt="Avant-première">
+            <img src="../../html/img/ico-megaphone.png" alt="Avant-première">
 
             <h1>Avant-première</h1>
 
@@ -41,7 +41,7 @@
         </article>
 
         <article class="grille_4">
-            <img src="img/ico-popcorn.png" alt="Pop combo">
+            <img src="../../html/img/ico-popcorn.png" alt="Pop combo">
 
             <h1>Pop combo</h1>
 
@@ -49,7 +49,7 @@
         </article>
 
         <article class="grille_4">
-            <img src="img/ico-billets.png" alt="Achat en ligne">
+            <img src="../../html/img/ico-billets.png" alt="Achat en ligne">
 
             <h1>Achat en ligne</h1>
 
@@ -89,7 +89,7 @@
         <h2 class="grille_12"><span>Nouveautés</span> novembre 2013</h2>
 
         <figure class="grille_3">
-            <img src="img/img-film-01.jpg" alt="Capitaine Phillips">
+            <img src="../../html/img/img-film-01.jpg" alt="Capitaine Phillips">
 
             <figcaption>
                 <h3>Capitaine Phillips</h3>
@@ -99,7 +99,7 @@
         </figure>
 
         <figure class="grille_3">
-            <img src="img/img-film-02.jpg" alt="Vilain Grand-Père">
+            <img src="../../html/img/img-film-02.jpg" alt="Vilain Grand-Père">
 
             <figcaption>
                 <h3>Vilain Grand-Père</h3>
@@ -109,7 +109,7 @@
         </figure>
 
         <figure class="grille_3">
-            <img src="img/img-film-03.jpg" alt="La stratégie Ender">
+            <img src="../../html/img/img-film-03.jpg" alt="La stratégie Ender">
 
             <figcaption>
                 <h3>La stratégie Ender</h3>
@@ -119,7 +119,7 @@
         </figure>
 
         <figure class="grille_3">
-            <img src="img/img-film-04.jpg" alt="Douze ans d’esclavage">
+            <img src="../../html/img/img-film-04.jpg" alt="Douze ans d’esclavage">
 
             <figcaption>
                 <h3>Douze ans d’esclavage</h3>
@@ -133,4 +133,4 @@
 
 <!--  FOOTER
 ========================================== -->
-<?php include 'view/footer.php'; ?>
+<?php include '../view/footer.php'; ?>
