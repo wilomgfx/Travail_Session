@@ -10,8 +10,6 @@
 
             <figcaption id="promo_caption">
                 <h1>« Entrez dans le monde de JuliePro »</h1>
-
-                <p>Joindre</p>
                 <!--<a class="cta">Participer au concours</a>-->
             </figcaption>
         </figure>
@@ -20,38 +18,28 @@
 
 <!--  Section INTRO
 ========================================== -->
-
-<section id="intro">
-    <div class="wrapper">
-        <article class="grille_4">
-            <img src="../../html/img/ico-megaphone.png" alt="Avant-première">
-
-            <h1>Avant-première</h1>
-
-            <p>Soyez les premiers à visionner les nouveautés en salles.</p>
-        </article>
-
-        <article class="grille_4">
-            <img src="../../html/img/ico-popcorn.png" alt="Pop combo">
-
-            <h1>Pop combo</h1>
-
-            <p>Évitez la fringale en faisant le plein de popcorn avant votre projection.</p>
-        </article>
-
-        <article class="grille_4">
-            <img src="../../html/img/ico-billets.png" alt="Achat en ligne">
-
-            <h1>Achat en ligne</h1>
-
-            <p>Réservez facilement vos places dans le confort de votre foyer.</p>
-        </article>
-    </div>
-</section>
+    <section class="loginform cf">
+        <div class="wrapper">
+        <form name="login" action="index_submit" method="get" accept-charset="utf-8">
+            <ul>
+                <li>
+                    <label for="user">Utilisateur</label>
+                    <input type="text" name="username" placeholder="yourusername" required>
+                </li>
+                <li>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="password" required></li>
+                <li>
+                    <input type="submit" value="Login">
+                </li>
+            </ul>
+        </form>
+        </div>
+    </section>
 
 <!--  Section HORAIRE
 ========================================== -->
-
+<!--
 <section id="horaire">
     <div class="wrapper">
         <h2 class="grille_12"><span>Horaires</span> des films</h2>
@@ -71,10 +59,10 @@
         </aside>
     </div>
 </section>
-
+-->
 <!--  Section NOUVEAUTÉS
 ========================================== -->
-
+<!--
 <section id="nouveaute">
     <div class="wrapper">
         <h2 class="grille_12"><span>Nouveautés</span> novembre 2013</h2>
@@ -121,7 +109,7 @@
         </figure>
     </div>
 </section>
-
+-->
 <!--  FOOTER
 ========================================== -->
 <?php include '../view/footer.php'; ?>

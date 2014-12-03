@@ -9,6 +9,8 @@
     <link href="css/style-base.css" rel="stylesheet">
 	 <link href="../css/grille-base.css" rel="stylesheet">
     <link href="../css/style-base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/styleLogin.css">
 </head>
 <body>
 <!--  HEADER
@@ -20,8 +22,8 @@
         <nav class="grille_12">
             <ul id="menu_header">
                 <li><a class="current" href="../index/index.php">Accueil</a></li>
-                <li><a href="../client_manager">Inscription Client</a></li>
-                <li><a href="../entraineur_manager/index.php">Inscription Entraineur</a></li>
+                <li><a href="../client_manager">Gestion Client</a></li>
+                <li><a href="../entraineur_manager/index.php">Gestion entraineur</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
