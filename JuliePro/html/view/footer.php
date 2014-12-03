@@ -15,12 +15,12 @@
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#">Films</a></li>
                 <li><a href="#horaire">Horaires</a></li>
-                <li><a href="#">Actualités</a></li>
+                <li><a href="#">ActualitÃ©s</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
 
-        <p class="grille_12">Cinéma Québec © 2014 - Tous droits réservés</p>
+        <p class="grille_12">Julie Pro 2014 - Tous droits rÃ©servÃ©s</p>
     </div>
 </footer>
 
