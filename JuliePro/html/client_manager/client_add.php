@@ -1,8 +1,9 @@
 <?php include '../view/header.php'; ?>
 
-<div class="wrapper">
+<section>
+    <div class="wrapper">
+        <h2>Inscrire un Client</h2>
 
-    <h1 class="grille_12">Inscription Client</h1>
 
     <form class ="grille_12">
         <div class="grille_12">
@@ -94,6 +95,6 @@
 
 
 </div>
-
+    </section>
 
 <?php include '../view/footer.php'; ?>
