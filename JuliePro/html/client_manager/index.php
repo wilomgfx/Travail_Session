@@ -1,5 +1,5 @@
 <?php
-//require('../model/database.php');
+require('../model/database.php');
 //require('../model/client_db.php');
 
     $action = 'client_add';
