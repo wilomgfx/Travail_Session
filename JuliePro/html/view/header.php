@@ -20,8 +20,8 @@
         <nav class="grille_8">
             <ul id="menu_header">
                 <li><a class="current" href="#">Accueil</a></li>
-                <li><a href="#horaire">Horaires</a></li>
-                <li><a href="#nouveaute">Nouveautés</a></li>
+                <li><a href="../client_manager">Inscription Client</a></li>
+                <li><a href="../entraineur_manager">Inscription Entraineur</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
