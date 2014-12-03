@@ -6,24 +6,15 @@
 <section>
     <div class="wrapper">
         <figure id="promo_image" class="grille_12">
-            <img src="../../html/img/diapo-thor.jpg" alt="Thor : un monde obscur">
+            <img src="../../html/img/320.jpg" alt="Thor : un monde obscur">
 
             <figcaption id="promo_caption">
-                <h1>Concours « Entrez dans le monde de Thor »</h1>
+                <h1>« Entrez dans le monde de JuliePro »</h1>
 
-                <p>Gagnez une paire de billets pour le film Thor: Un monde obscur</p>
-                <a class="cta">Participer au concours</a>
+                <p>Joindre</p>
+                <!--<a class="cta">Participer au concours</a>-->
             </figcaption>
         </figure>
-
-        <nav id="promo_nav" class="grille_12">
-            <ul>
-                <li><a class="current" href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul>
-        </nav>
     </div>
 </section>
 
