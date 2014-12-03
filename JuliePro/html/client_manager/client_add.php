@@ -6,91 +6,76 @@
 
 
     <form class ="grille_12">
-        <div class="grille_12">
-            Nom:
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
+        <table>
+           <tr>
+                <td align="right">
+                     Nom:
+                     <input type="text" name="Nom">
+                  </td>
+                  <td align="right">
+                      Prenom:
+                     <input type="text" name="Prenom">
+                  </td>
+           </tr>
+           <tr>
+               <td align="right">
+                No téléphone:
+                 <input type="text" name="Tel">
+                 </td>
+               <td align="right">
+                 No Cellulaire:
+                <input type="text" name="Cell">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                     Adresse:
+                    <input type="text" name="Adresse">
+                </td>
+                <td align="right">
+                    Ville:
+                    <input type="text" name="Ville">
+                </td>
+                <td align="right">
+                     Code Postal:
+                     <input type="text" name="CodePostal">
+                 </td>
+            </tr>
 
-            <input type="text" name="Nom">
-            &nbsp;
-             Prenom:
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-             <input type="text" name="Prenom">
-              <br>
-        </div>
-        <div class="grille_12">
-             No téléphone:
-            <input type="text" name="Tel">
-             &nbsp;
-             No Cellulaire:
-             <input type="text" name="Cell">
-             <br>
-         </div>
-        <div class="grille_12">
-            Adresse:
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-             <input type="text" name="Adresse">
-            &nbsp;
-            &nbsp;
-             Ville:
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            <input type="text" name="Ville">
-             Code Postal:
-             <input type="text" name="CodePostal">
-             <br>
-        </div>
-        <div class="grille_12">
-        Age:
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-        <input type="text" name="Age">
-        <br>
-            </div>
-        <div class="grille_12">
-            Date inscription:
-            <input type="text" name="DateInsc">
-             <br>
-        </div>
-        <div class="grille_12">
+           <tr>
+               <td align="right">
+                 Age:
+                <input type="text" name="Age">
+               </td>
+            </tr>
+
+            <tr>
+                <td align="right">
+                Date inscription:
+                <input type="text" name="DateInsc">
+                </td>
+            </tr>
+
+             <tr>
+                 <td align="right">
             Courriel:
              <input type="text" name="Courriel">
-             <br>
-         </div>
-        <div class="grille_12">
+                 </td>
+             </tr>
+
+            <tr>
+                <td align="right">
              Entraineur:
              <input type="text" name="Entraineur">
-             <br>
-        </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+            <input type="submit" value="Inscrire">
+                </td>
+            </tr>
 
+      </table>
     </form>
 
 
