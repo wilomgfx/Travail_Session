@@ -45,21 +45,21 @@
            <tr>
                <td align="right">
                  Age:
-                <input type="text" name="Age">
+                <input type="number" name="Age">
                </td>
             </tr>
 
             <tr>
                 <td align="right">
                 Date inscription:
-                <input type="text" name="DateInsc">
+                <input type="date" name="DateInsc">
                 </td>
             </tr>
 
              <tr>
                  <td align="right">
             Courriel:
-             <input type="text" name="Courriel">
+             <input type="email" name="Courriel">
                  </td>
              </tr>
 
