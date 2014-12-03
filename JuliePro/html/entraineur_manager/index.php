@@ -5,10 +5,19 @@
 
 <section>
     <div class="wrapper">
-    <table class="grille_12">
-        <td>1</td>
-        <tr>2</tr>
-    </table>
+        <h2>Inscrire un Entraineur</h2>
+   <form class="grille_12">
+       <label>Nom : <input type="text"></label>
+       <label>Prénom : <input type="text"></label>
+       <label>Tel : <input type="text"></label>
+       <label>numTel : <input type="text"></label>
+       <label>numCell : <input type="text"></label>
+       <label>Adresse : <input type="text"></label>
+       <label>Courriel : <input type="text"></label>
+       <label>Nom : <input type="text"></label>
+       <label>Nom : <input type="text"></label>
+
+   </form>
     </div>
 </section>
 
