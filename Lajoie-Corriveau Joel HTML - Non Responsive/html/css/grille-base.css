@@ -1,0 +1,91 @@
+/* Wrapper
+================================================= */
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+    /*La propriété Overflow est comme un petit hack CSS qui permet à un wrapper de déttecter tous les éléments
+    qui flotte à l'intérieur de lui même et ensuite de pouvoir appliquer une hauteur au wrapper de cette manière.*/
+}
+
+header, footer {
+    background-color: white;
+}
+section:nth-child(odd) {
+    /*Inset fait une sorte de lumière venant sur le dessus de l'élément.*/
+    box-shadow: inset 0 20px 30px rgba(186,184,177,0.35);
+    background-color: #E3E0D8;
+}
+
+/* Grille
+================================================= */
+/*Elles servent à positionner les éléments sur la page pour qu'ils prennent une certaine longueur. La page fait toujours
+12 cases. Grille 4, par exemple, donne à une image un espace de 4 cases.*/
+
+.grille_1,
+.grille_2,
+.grille_3,
+.grille_4,
+.grille_5,
+.grille_6,
+.grille_7,
+.grille_8,
+.grille_9,
+.grille_10,
+.grille_11,
+.grille_12 {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Grille >> 12 Colonnes
+================================================= */
+
+.grille_1 {
+    width: 60px;
+}
+
+.grille_2 {
+    width: 140px;
+}
+
+.grille_3 {
+    width: 220px;
+}
+
+.grille_4 {
+    width: 300px;
+}
+
+.grille_5 {
+    width: 380px;
+}
+
+.grille_6 {
+    width: 460px;
+}
+
+.grille_7 {
+    width: 540px;
+}
+
+.grille_8 {
+    width: 620px;
+}
+
+.grille_9 {
+    width: 700px;
+}
+
+.grille_10 {
+    width: 780px;
+}
+
+.grille_11 {
+    width: 860px;
+}
+
+.grille_12 {
+    width: 940px;
+}
