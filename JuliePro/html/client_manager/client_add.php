@@ -79,7 +79,7 @@
                 </tr>
                 <tr>
                     <td align="right">
-                        <input type="submit" value="Inscrire">
+                        <input type="submit" value="Modifier">
                     </td>
                 </tr>
 
@@ -88,16 +88,23 @@
     </div>
 </section>
 
-
-
 <!-- Section inscription Client -->
 <section>
     <div class="wrapper">
         <h2>Inscrire un Client</h2>
 
-
          <form class ="grille_12">
             <table>
+                <tr>
+                    <td align="right">Username: <input type="text" name="Username"</td>
+                    <td align="right">Password: <input type="text" name="Password"</td>
+                    <td align="right"> Statut: <input list="lstStatut" name="LstStatut">
+                                      <datalist id="lstStatut">
+                                      <option value="utilisateur">
+                                      <option value="admin">
+                                      <option value="super-admin">
+                                      </datalist></td>
+                </tr>
                 <tr>
                     <td align="right">
                           Nom:
