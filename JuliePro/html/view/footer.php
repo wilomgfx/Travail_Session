@@ -7,7 +7,7 @@
 
         <nav class="grille_12">
             <ul id="menu_footer">
-                <li><a href="../index/index.php">Accueil</a></li>
+                <li><a href="../index/login_page.php">Accueil</a></li>
                 <li><a href="../client_manager">Gestion Client</a></li>
                 <li><a href="../entraineur_manager/index.php">Gestion entraineur</a></li>
                 <li><a href="#">Contact</a></li>

@@ -1,5 +1,5 @@
 <?php include '../view/header.php'; ?>
-
+<?php session_start(); ?>
 <!--  Section PROMO
 ========================================== -->
 
@@ -14,6 +14,7 @@
             </figcaption>
         </figure>
     </div>
+    <?php print_r($_SESSION['user']); ?>
 </section>
 
 <!--  Section HORAIRE
