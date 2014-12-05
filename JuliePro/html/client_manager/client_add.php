@@ -4,7 +4,7 @@
 <section>
     <div class="wrapper">
         <h2>Information Client</h2>
-        <form class ="grille_12" action="index.php">
+        <form class ="grille_12" action="index.php" method="post">
             <input type="hidden" value="Afficher" name="action">
             <table>
                  <tr>
@@ -22,7 +22,7 @@
                     </table>
             </form>
 
-            <form class ="grille_12" action="index.php">
+            <form class ="grille_12" action="index.php"  method="post">
 
             <input type="hidden" value="Modifier" name="action">
             <table>
@@ -103,8 +103,7 @@
 <section>
     <div class="wrapper">
         <h2>Inscrire un Client</h2>
-
-         <form class ="grille_12" action="index.php">
+         <form class ="grille_12" action="index.php"  method="post">
              <input type="hidden" value="Inscrire" name="action">
             <table>
                 <tr>
@@ -114,7 +113,7 @@
                                       <datalist id="lstStatut">
                                       <option value="utilisateur">
                                       <option value="admin">
-                                      <option value="super-admin">
+                                      <option value="super_admin">
                                       </datalist></td>
                 </tr>
                 <tr>

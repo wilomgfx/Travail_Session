@@ -9,4 +9,15 @@ if ($action == 'client_add') {
     // Display the product list
     include('client_add.php');
 }
+if($action == 'Afficher'){
+
+}
+if($action == 'Modifier')
+{
+
+}
+if($action == 'Inscrire')
+{
+
+}
 ?>
