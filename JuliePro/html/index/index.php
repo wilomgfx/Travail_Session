@@ -9,7 +9,7 @@
 <section class="loginform cf">
         <div class="wrapper">
             <img src="../img/julieProLogoPetit.png">
-            <form name="login" action="index_submit" method="get" accept-charset="utf-8">
+            <form name="login" action="" method="post" accept-charset="utf-8">
                 <ul>
                     <li>
                         <label for="user">Utilisateur</label>
