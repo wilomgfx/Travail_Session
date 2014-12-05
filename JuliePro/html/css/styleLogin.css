@@ -1,5 +1,8 @@
 html {
 	font-size: 10pt;
+    background-image: url(../img/gymDumbellBackground.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 label {
 	display: block;

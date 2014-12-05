@@ -13,11 +13,11 @@
                 <ul>
                     <li>
                         <label for="user">Utilisateur</label>
-                        <input type="text" name="username" placeholder="yourusername" required>
+                        <input type="text" name="username" placeholder="Votre utilisateur" required>
                     </li>
                     <li>
-                        <label for="password">Password</label>
-                        <input type="password" name="password" placeholder="password" required></li>
+                        <label for="password">Mot de passe</label>
+                        <input type="password" name="password" placeholder="Votre mot de passe" required></li>
                     <li>
                         <input type="submit" value="Se connecter">
                     </li>
