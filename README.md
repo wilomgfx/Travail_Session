@@ -1,2 +1,2 @@
-Travail_Session
+Travail_Session Cantin, Lajoie-Corriveau, Plamondon
 ===============
