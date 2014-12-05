@@ -9,8 +9,6 @@
     <link href="css/style-base.css" rel="stylesheet">
 	 <link href="../css/grille-base.css" rel="stylesheet">
     <link href="../css/style-base.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/styleLogin.css">
 </head>
 <body>
 <!--  HEADER
