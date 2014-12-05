@@ -89,6 +89,8 @@ textarea {
 
 body {
     margin: 0;
+    padding: 250px;
+    background-color:darkgray;
 }
 
 /* ==========================================================================
