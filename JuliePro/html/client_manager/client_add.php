@@ -12,7 +12,7 @@
                            Client:
                          <input list="lstClient" name="listePersonne">
                          <datalist id="lstClient">
-                         <option value="Steven">
+                         <option value="">
                          </datalist>
                      </td>
                      </tr>
