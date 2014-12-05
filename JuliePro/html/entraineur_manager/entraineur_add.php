@@ -6,7 +6,8 @@
     <section>
         <div class="wrapper">
             <h2>Inscrire un Entraineur</h2>
-            <form class ="grille_12">
+            <form action="index.php" method="post"  class ="grille_12">
+                <input type="hidden" name="action" value="add_entraineur" />
                 <table>
                     <tr>
                         <td align="right">
