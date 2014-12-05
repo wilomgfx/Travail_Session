@@ -5,6 +5,7 @@ function ajouter_utilisateur($Username, $Password, $Statut)
     global $db;
     $query="INSERT INTO utilisateur (username, password, statut) VALUES('$Username', '$Password', '$Statut')";
     $utilisateur = $db->query($query);
+    $utilisateur =  $utilisateur->fetch();
     return $utilisateur;
 }
 function get_utilisateur_by_id($UtilisateurID)
@@ -13,6 +14,7 @@ function get_utilisateur_by_id($UtilisateurID)
     $query ="Select * FROM utilisateur
              where utilisateurID = '$UtilisateurID'";
     $utilisateur = $db->query($query);
+    $utilisateur =  $utilisateur->fetch();
     return $utilisateur;
 }
 function get_userID_by_username($Username)
@@ -21,5 +23,6 @@ function get_userID_by_username($Username)
     $query ="Select * FROM utilisateur
              where utilisateurID = '$Username'";
     $utilisateur = $db->query($query);
+    $utilisateur =  $utilisateur->fetch();
     return $utilisateur;
 }

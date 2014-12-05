@@ -6,6 +6,7 @@ function get_client()
     $query = 'SELECT * FROM client
               ORDER BY clientID';
     $client = $db->query($query);
+    $client = $client ->fetch();
     return  $client;
 }
 function get_client_by_ID($clientID)
@@ -14,6 +15,7 @@ function get_client_by_ID($clientID)
     $query = "SELECT * FROM client
               where clientID = '$clientID'";
     $client = $db->query($query);
+    $client = $client ->fetch();
     return  $client;
 }
 function inscrire_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $CodePostal, $Age, $DateInsc, $Courriel, $UtilisateurID,$EntraineurID)
@@ -21,6 +23,7 @@ function inscrire_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $Code
     global $db;
     $query = "INSERT INTO client (nom, prenom, numTel, numCell, adresse, ville, codePostal, age, dateInscription, courriel, FK_utilisateurID,FK_entraineurID) VALUES('$Nom', '$Prenom', '$NoTel', '$NoCell', '$Adresse', '$Ville', '$CodePostal', '$Age', '$DateInsc', '$Courriel','$UtilisateurID', '$EntraineurID')";
     $client = $db->query($query);
+    $client = $client ->fetch();
     return  $client;
 }
 function modifier_client($clientID, $Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $CodePostal, $Age, $DateInsc, $Courriel, $UtilisateurID,$EntraineurID)
@@ -30,6 +33,7 @@ function modifier_client($clientID, $Nom, $Prenom, $NoTel, $NoCell, $Adresse, $V
               SET nom ='$Nom', prenom ='$Prenom', numTel ='$NoTel', numCell='$NoCell', adresse='$Adresse', ville='$Ville', codePostal='$CodePostal', age='$Age', dateInscription='$DateInsc', courriel='$Courriel',FK_utilisateurID ='$UtilisateurID', FK_entraineurID='$EntraineurID'
               WHERE clientID = '$clientID'";
     $client = $db->query($query);
+    $client = $client ->fetch();
     return  $client;
 }
 
