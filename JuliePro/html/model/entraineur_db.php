@@ -1,10 +1,16 @@
 <?php
-function add_entraineur($nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$dateInscription ,$courriel) {
+function add_entraineur($user,$password,$statut,$nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$dateInscription ,$courriel) {
     global $db;
-    $query = "INSERT INTO Entraineur
+    $query = "INSERT INTO entraineur
                  (nom, prenom, numTel,numCell,Adresse,ville,codePostal,age,dateInscription,courriel)
               VALUES
                  ('$nom', '$prenom', '$numTel','$numCell','$Adresse','$ville','$codePostal','$age','$dateInscription' ,'$courriel')";
+    $db->exec($query);
+    //Pour inserer dans la table user.
+    $query = "INSERT INTO utilisateur
+              (username,password,statut)
+              VALUES
+                    ('$user','$password','$statut')";
     $db->exec($query);
 }
 function get_entraineur_by_name($nom){

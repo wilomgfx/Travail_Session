@@ -11,7 +11,7 @@
     <div class="wrapper">
         <img src="../img/julieProLogoPetit.png">
         <br>
-        <p>Bonjour <?php echo $user['username'] ?>! Redirection en cours...</p>
+        <h2>Bonjour <span id="span"><?php echo $user['username'] ?></span>! Redirection en cours...</h2>
     </div>
 </section>
 </body>

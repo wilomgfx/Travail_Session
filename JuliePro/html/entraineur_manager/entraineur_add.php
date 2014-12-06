@@ -4,7 +4,7 @@
     <section>
         <div class="wrapper">
             <h2>Information Entraineur</h2>
-            <form class ="grille_12" action="index.php">
+            <form class ="grille_12" action="index.php" method="post">
                 <input type="hidden" value="Afficher" name="action">
                 <table>
                     <tr>
@@ -98,13 +98,13 @@
         <div class="wrapper">
             <h2>Inscrire un Entraineur</h2>
 
-            <form class ="grille_12" action="index.php">
-                <input type="hidden" value="Inscrire" name="action">
+            <form class ="grille_12" action="index.php" method="post">
+                <input type="hidden" value="add_entraineur" name="action">
                 <table>
                     <tr>
-                        <td align="right">Username: <input type="text" name="Username"</td>
-                        <td align="right">Password: <input type="text" name="Password"</td>
-                        <td align="right"> Statut: <input list="lstStatut" name="LstStatut">
+                        <td align="right">Username: <input type="text" name="user"</td>
+                        <td align="right">Password: <input type="text" name="password"</td>
+                        <td align="right"> Statut: <input list="lstStatut" name="statut">
                             <datalist id="lstStatut">
                                 <option value="utilisateur">
                                 <option value="admin">
@@ -114,21 +114,21 @@
                     <tr>
                         <td align="right">
                             Nom:
-                            <input type="text" name="Nom">
+                            <input type="text" name="nom">
                         </td>
                         <td align="right">
                             Prenom:
-                            <input type="text" name="Prenom">
+                            <input type="text" name="prenom">
                         </td>
                     </tr>
                     <tr>
                         <td align="right">
                             No téléphone:
-                            <input type="text" name="Tel">
+                            <input type="text" name="tel">
                         </td>
                         <td align="right">
                             No Cellulaire:
-                            <input type="text" name="Cell">
+                            <input type="text" name="cell">
                         </td>
                     </tr>
                     <tr>

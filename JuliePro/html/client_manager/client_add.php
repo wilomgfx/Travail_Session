@@ -72,6 +72,7 @@
                     <td align="right">
                         Date inscription:
                         <input type="date" name="DateInsc">
+
                     </td>
                 </tr>
 
