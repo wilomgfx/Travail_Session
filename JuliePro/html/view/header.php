@@ -1,7 +1,6 @@
 <!-- On garde la session -->
 <?php session_start(); ?>
 <?php $user = $_SESSION['user']; ?>
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
@@ -22,10 +21,9 @@
 
         <nav class="grille_12">
             <ul id="menu_header">
-                <li><a href="../index/login_page.php">Accueil</a></li>
+                <li><a href="../index/indexbase.php">Accueil</a></li>
                 <li><a href="../client_manager">Gestion Client</a></li>
                 <li><a href="../entraineur_manager/index.php">Gestion entraineur</a></li>
-                <li><a href="#">Contact</a></li>
                 <li><a class="current" href="#">Logged in as : <?php echo $user['username'];?></a> </li>
             </ul>
         </nav>

@@ -96,7 +96,7 @@ header {
 /* ----- Menu principal ----- */
 
 header ul {
-    float: right;
+    /*float: right;*/
 }
 header li {
     display: inline-block;
@@ -107,13 +107,13 @@ header nav {
 header nav a {
     font-family: "Bree Serif", Georgia, fantasy;
     font-size: 18px;
-    color: #BBB8B3;
+    color: #3B3A39;
     text-transform: uppercase;
     margin-left: 20px;
     padding: 5px 8px;
 }
 header nav a:hover, .current {
-    background-color: #FFDA02;
+    background-color: #64c8ef;
     color: #3B3A33;
 }
 
@@ -137,7 +137,7 @@ header nav a:hover, .current {
     padding: 10px;
 }
 #promo_caption h1 {
-    color: #FFDA02;
+    color: #64c8ef;
     font: 18px "Open Sans", Arial, Helvetica, sans-serif;
 }
 
@@ -174,7 +174,7 @@ header nav a:hover, .current {
 }
 
 #promo_nav a:hover, .current {
-    background-color: #FFDA02;
+    background-color: #64c8ef;
 }
 /*#promo_caption a {
     float: right;
@@ -188,73 +188,6 @@ header nav a:hover, .current {
     border-radius: 5px;
 }*/
 
-
-/* Section Intro
-================================================= */
-
-#intro img {
-    border-radius: 50%;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.20);
-    margin-bottom: 20px;
-}
-
-#intro article{
-    text-align: center;
-}
-
-#intro h1{
-    font-size: 2em;
-}
-
-#intro p {
-    font-size: 1.1em;
-    font-weight: normal;
-}
-
-
-/* Section Horaires
-================================================= */
-#horaire h2 span{
-    color: #FFDA02;
-}
-
-#horaire p {
-    font-size: 1.1em;
-}
-
-#horaire h1 {
-    font-size: 2em;
-}
-
-#horaire aside {
-    background-color: white;
-    padding: 20px;
-}
-
-#horaire .cta {
-    margin: 0 auto;
-    margin-top: 10px;
-}
-
-
-/* Section Nouveautés
-================================================= */
-#nouveaute h2 span{
-    color: #FFDA02;
-}
-
-#nouveaute p{
-    color: #727272;
-    font-size: 14px;
-}
-
-#nouveaute img{
-    margin-bottom: 10px;
-}
-
-#nouveaute h3{
-    margin-bottom: 5px;
-}
 /* Footer
 ================================================= */
 

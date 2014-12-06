@@ -6,7 +6,7 @@ function add_entraineur($user,$password,$statut,$nom, $prenom, $numTel,$numCell,
               VALUES
                  ('$nom', '$prenom', '$numTel','$numCell','$Adresse','$ville','$codePostal','$age','$dateInscription' ,'$courriel')";
     $db->exec($query);
-    //Pour inserer dans la table user.
+    //Pour inserer dans la table utilisateur.
     $query = "INSERT INTO utilisateur
               (username,password,statut)
               VALUES
@@ -17,7 +17,7 @@ function get_entraineur_by_name($nom){
 
 }
 
-function update_product($entraineurID,$nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$courriel) {
+function update_entraineur($entraineurID,$nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$courriel) {
     global $db;
     $query = "UPDATE Entraineur
               SET entraineurID = '$entraineurID',
