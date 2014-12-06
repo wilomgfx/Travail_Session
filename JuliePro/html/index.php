@@ -1,3 +1,3 @@
 <?php
-header('Location: index/indexbase.php');
+header('Location: index/index.php');
 ?>

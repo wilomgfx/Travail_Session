@@ -1,5 +1,4 @@
 <?php include '../view/header.php'; ?>
-<?php session_start(); ?>
 <!--  Section PROMO
 ========================================== -->
 
