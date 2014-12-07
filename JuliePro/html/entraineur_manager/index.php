@@ -1,6 +1,7 @@
 <?php
 require('../model/database.php');
 require('../model/entraineur_db.php');
+require('../model/utilisateur_db.php');
 
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
@@ -37,6 +38,7 @@ elseif($action =='add_entraineur')
         include('../errors/error.php');
     } else {
         add_entraineur($user,$password,$statut,$nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$dateInscription ,$courriel);
+
         echo "<script type='text/javascript'>alert('Entraineur : '+ '$nom' + ' ajouté avec succès!')</script>";
         include('../index/indexbase.php');
     }

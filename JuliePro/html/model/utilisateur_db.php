@@ -1,12 +1,16 @@
 <?php
 
-function ajouter_utilisateur($Username, $Password, $Statut)
+function ajouter_utilisateur($username, $password, $statut)
 {
     global $db;
-    $query="INSERT INTO utilisateur (username, password, statut) VALUES('$Username', '$Password', '$Statut')";
-    $utilisateur = $db->query($query);
-    $utilisateur =  $utilisateur->fetch();
-    return $utilisateur;
+    $query="INSERT INTO utilisateur
+                            (username, password, statut)
+                    VALUES('$username', '$password', '$statut')";
+    //Pas besoins de fetch et de return une variable, on add dans la DB
+    $db->query($query);
+   // $utilisateur = $db->query($query);
+   // $utilisateur =  $utilisateur->fetch();
+   // return $utilisateur;
 }
 function get_utilisateur_by_id($UtilisateurID)
 {
@@ -17,12 +21,14 @@ function get_utilisateur_by_id($UtilisateurID)
     $utilisateur =  $utilisateur->fetch();
     return $utilisateur;
 }
-function get_userID_by_username($Username)
+function get_userID_by_username($username)
 {
     global $db;
     $query ="Select * FROM utilisateur
-             where utilisateurID = '$Username'";
+             where username = '$username'";
     $utilisateur = $db->query($query);
     $utilisateur =  $utilisateur->fetch();
-    return $utilisateur;
+    $utilisateurID = $utilisateur['utilisateurID'];
+
+    return $utilisateurID;
 }

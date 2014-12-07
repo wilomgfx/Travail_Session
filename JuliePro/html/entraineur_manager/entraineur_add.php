@@ -102,14 +102,15 @@
                 <input type="hidden" value="add_entraineur" name="action">
                 <table>
                     <tr>
-                        <td align="right">Username: <input type="text" name="user"</td>
-                        <td align="right">Password: <input type="text" name="password"</td>
+                        <td align="right">Nom d'usager: <input type="text" name="user"</td>
+                        <td align="right">Mot de passe: <input type="text" name="password"</td>
                         <td align="right"> Statut: <input list="lstStatut" name="statut">
                             <datalist id="lstStatut">
                                 <option value="utilisateur">
                                 <option value="admin">
                                 <option value="super-admin">
-                            </datalist></td>
+                            </datalist>
+                        </td>
                     </tr>
                     <tr>
                         <td align="right">
