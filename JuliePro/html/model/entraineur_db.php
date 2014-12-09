@@ -7,7 +7,6 @@ function add_entraineur($nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePos
                  ('$nom', '$prenom', '$numTel','$numCell','$Adresse','$ville','$codePostal','$age','$dateInscription' ,'$courriel','$userID')";
     $db->exec($query);
     echo "<script type='text/javascript'>alert('$userID')</script>";
-    return;
  //   $entraineurID = get_entraineurID_by_name($nom);
     //update_utilisateurID_by_entraineurID($entraineurID,$userID);
 
