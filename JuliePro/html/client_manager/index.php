@@ -27,16 +27,23 @@ if($action == 'Modifier')
 if($action == 'Inscrire')
 {
     $Nom = $_POST['Nom'];
-    $Prenom = $_POST[Nom
-    $NoTel = $_POST[
-    $NoCell = $_POST[
-    $Adresse = $_POST[
-    $Ville = $_POST[
-    $CodePostal = $_POST[
-    $Age = $_POST[
-    $DateInsc = $_POST[
-    $Courriel = $_POST[
-    $UtilisateurID = $_POST[
-    $EntraineurID = $_POST[
+    $Prenom = $_POST['Prenom'];
+    $NoTel = $_POST['Tel'];
+    $NoCell = $_POST['Cell'];
+    $Adresse = $_POST['Adresse'];
+    $Ville = $_POST['Ville'];
+    $CodePostal = $_POST['CodePostal'];
+    $Age = $_POST['Age'];
+    $DateInsc = $_POST['DateInsc'];
+    $Courriel = $_POST['Courriel'];
+    $username = $_POST['Username'];
+    $password = $_POST['Password'];
+    $statut = $_POST['LstStatut'];
+    $Entraineur = $_POST['Entraineur'];
+    ajouter_utilisateur($username,$password,$statut);
+    $UtilisateurID = get_userID_by_username($username)['utilisateurID'];
+    $EntraineurID = get_entraineurID_by_name($Entraineur)['entraineurID'];
+
+    inscrire_client($Nom,$Prenom,$NoTel,$NoCell,$Adresse,$Ville,$CodePostal,$Age,$DateInsc,$Courriel,$UtilisateurID,$EntraineurID);
 }
 ?>
