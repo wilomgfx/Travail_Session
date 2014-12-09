@@ -7,10 +7,9 @@ function ajouter_utilisateur($username, $password, $statut)
                             (username, password, statut)
                     VALUES('$username', '$password', '$statut')";
     //Pas besoins de fetch et de return une variable, on add dans la DB
-    $db->query($query);
-   // $utilisateur = $db->query($query);
-   // $utilisateur =  $utilisateur->fetch();
-   // return $utilisateur;
+    $db->exec($query);
+    $userID = get_userID_by_username($username);
+    return $userID;
 }
 function get_utilisateur_by_id($UtilisateurID)
 {

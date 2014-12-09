@@ -37,7 +37,8 @@ elseif($action =='add_entraineur')
         $error = "Invalid product data. Check all fields and try again.";
         include('../errors/error.php');
     } else {
-        add_entraineur($user,$password,$statut,$nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$dateInscription ,$courriel);
+        $userID =  ajouter_utilisateur($user,$password,$statut);
+        add_entraineur($nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$dateInscription ,$courriel,$userID);
 
         echo "<script type='text/javascript'>alert('Entraineur : '+ '$nom' + ' ajouté avec succès!')</script>";
         include('../index/indexbase.php');

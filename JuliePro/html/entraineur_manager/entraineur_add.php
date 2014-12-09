@@ -108,7 +108,7 @@
                             <datalist id="lstStatut">
                                 <option value="utilisateur">
                                 <option value="admin">
-                                <option value="super-admin">
+                                <option value="super_admin">
                             </datalist>
                         </td>
                     </tr>

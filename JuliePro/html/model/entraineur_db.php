@@ -1,21 +1,16 @@
 <?php
-function add_entraineur($user,$password,$statut,$nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$dateInscription ,$courriel) {
+function add_entraineur($nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$dateInscription ,$courriel,$userID) {
     global $db;
     $query = "INSERT INTO entraineur
-                 (nom, prenom, numTel,numCell,Adresse,ville,codePostal,age,dateInscription,courriel)
+                 (nom, prenom, numTel,numCell,Adresse,ville,codePostal,age,dateInscription,courriel,FK_utilisateurID)
               VALUES
-                 ('$nom', '$prenom', '$numTel','$numCell','$Adresse','$ville','$codePostal','$age','$dateInscription' ,'$courriel')";
+                 ('$nom', '$prenom', '$numTel','$numCell','$Adresse','$ville','$codePostal','$age','$dateInscription' ,'$courriel','$userID')";
     $db->exec($query);
-    //Pour inserer dans la table utilisateur.
-    $query = "INSERT INTO utilisateur
-             (username,password,statut)
-           VALUES
-                  ('$user','$password','$statut')";
-    $db->exec($query);
-    $userID = get_userID_by_username($user);
-    $entraineurID = get_entraineurID_by_name($nom);
-    update_utilisateurID_by_entraineurID($entraineurID,$userID);
     echo "<script type='text/javascript'>alert('$userID')</script>";
+    return;
+ //   $entraineurID = get_entraineurID_by_name($nom);
+    //update_utilisateurID_by_entraineurID($entraineurID,$userID);
+
 }
 function get_entraineurID_by_name($nom){
     global $db;
