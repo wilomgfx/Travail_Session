@@ -23,7 +23,6 @@ function inscrire_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $Code
     global $db;
     $query = "INSERT INTO client (nom, prenom, numTel, numCell, adresse, ville, codePostal, age, dateInscription, courriel, FK_utilisateurID,FK_entraineurID) VALUES('$Nom', '$Prenom', '$NoTel', '$NoCell', '$Adresse', '$Ville', '$CodePostal', '$Age', '$DateInsc', '$Courriel','$UtilisateurID', '$EntraineurID')";
     $client = $db->query($query);
-    $client = $client ->fetch();
     return  $client;
 }
 function modifier_client($clientID, $Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $CodePostal, $Age, $DateInsc, $Courriel, $UtilisateurID,$EntraineurID)

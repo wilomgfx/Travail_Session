@@ -2,6 +2,7 @@
 require('../model/database.php');
 require('../model/client_db.php');
 require('../model/utilisateur_db.php');
+require('../model/entraineur_db.php');
 
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
@@ -41,8 +42,8 @@ if($action == 'Inscrire')
     $statut = $_POST['LstStatut'];
     $Entraineur = $_POST['Entraineur'];
     ajouter_utilisateur($username,$password,$statut);
-    $UtilisateurID = get_userID_by_username($username)['utilisateurID'];
-    $EntraineurID = get_entraineurID_by_name($Entraineur)['entraineurID'];
+    $UtilisateurID = get_userID_by_username($username);
+    $EntraineurID = get_entraineurID_by_name($Entraineur);
 
     inscrire_client($Nom,$Prenom,$NoTel,$NoCell,$Adresse,$Ville,$CodePostal,$Age,$DateInsc,$Courriel,$UtilisateurID,$EntraineurID);
 }
