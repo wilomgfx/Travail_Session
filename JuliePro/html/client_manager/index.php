@@ -28,6 +28,21 @@ if($action == 'Afficher'){
 if($action == 'Modifier')
 {
 
+    $Nom = $_POST['Nom'];
+    $Prenom = $_POST['Prenom'];
+    $NoTel = $_POST['Tel'];
+    $NoCell = $_POST['Cell'];
+    $Adresse = $_POST['Adresse'];
+    $Ville = $_POST['Ville'];
+    $CodePostal = $_POST['CodePostal'];
+    $Age = $_POST['Age'];
+    $Courriel = $_POST['Courriel'];
+    $Client = get_client_by_name($Nom);
+    $ClientID = $Client['clientID'];
+
+     modifier_client($ClientID,$Nom,$Prenom, $NoTel,$NoCell,$Adresse,$Ville,$CodePostal,$Age,$Courriel);
+
+    include('client_add.php');
 }
 if($action == 'Inscrire')
 {

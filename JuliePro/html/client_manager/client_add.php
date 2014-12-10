@@ -88,13 +88,6 @@
                         <input type="email" name="Courriel" value="<?php echo $client['courriel'] ;?>" />
                     </td>
                 </tr>
-
-                <tr>
-                    <td align="right">
-                        Entraineur:
-                        <input type="text" name="Entraineur">
-                    </td>
-                </tr>
                 <tr>
                     <td align="right">
                         <input type="submit" value="Modifier">

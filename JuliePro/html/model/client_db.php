@@ -23,6 +23,7 @@ function get_client_by_name($nom)
     $query = "SELECT * FROM client
               where nom = '$nom'";
     $client = $db->query($query);
+    $client = $client->fetch();
     return  $client;
 }
 function inscrire_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $CodePostal, $Age, $DateInsc, $Courriel, $UtilisateurID,$EntraineurID)
@@ -35,14 +36,17 @@ function inscrire_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $Code
     $db->exec($query);
     $db->exec($query3);
 }
-function modifier_client($clientID, $Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $CodePostal, $Age, $DateInsc, $Courriel, $UtilisateurID,$EntraineurID)
+function modifier_client($clientID, $Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $CodePostal, $Age, $Courriel)
 {
     global $db;
     $query = "UPDATE client
-              SET nom ='$Nom', prenom ='$Prenom', numTel ='$NoTel', numCell='$NoCell', adresse='$Adresse', ville='$Ville', codePostal='$CodePostal', age='$Age', dateInscription='$DateInsc', courriel='$Courriel',FK_utilisateurID ='$UtilisateurID', FK_entraineurID='$EntraineurID'
+              SET nom ='$Nom', prenom ='$Prenom', numTel ='$NoTel', numCell='$NoCell', adresse='$Adresse', ville='$Ville', codePostal='$CodePostal', age='$Age',  courriel='$Courriel'
               WHERE clientID = '$clientID'";
-    $client = $db->query($query);
-    $client = $client ->fetch();
-    return  $client;
+    $query2 = "SET FOREIGN_KEY_CHECKS = 0;";
+    $query3 = "SET FOREIGN_KEY_CHECKS = 1;";
+    $db->exec($query2);
+    $db->exec($query);
+    $db->exec($query3);
+
 }
 
