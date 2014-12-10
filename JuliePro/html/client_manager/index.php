@@ -12,11 +12,11 @@ if (isset($_POST['action'])) {
     $action = 'client_add';
 }
 
+$clients = get_client();
+
 if ($action == 'client_add') {
     // Get the current category ID
     // Display the product list
-    $client = get_client();
-
     include('client_add.php');
 }
 if($action == 'Afficher'){
