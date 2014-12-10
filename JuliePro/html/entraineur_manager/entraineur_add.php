@@ -5,7 +5,7 @@
         <div class="wrapper">
             <h2>Information Entraineur</h2>
             <form class ="grille_12" action="index.php" method="post">
-                <input type="hidden" value="afficher_entraineur" name="action">
+                <input type="hidden" value="remplir_option_entraineur" name="action">
                 <table>
                     <tr>
                         <td align="right">

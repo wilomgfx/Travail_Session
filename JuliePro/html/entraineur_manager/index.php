@@ -3,7 +3,7 @@ require('../model/database.php');
 require('../model/entraineur_db.php');
 require('../model/utilisateur_db.php');
 
-
+$entraineurs = get_entraineurs();
 
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
@@ -14,7 +14,7 @@ if (isset($_POST['action'])) {
 }
 
 if ($action == 'entraineur_add') {
-    $entraineurs = get_entraineurs();
+
     include('entraineur_add.php');
 }
 
@@ -47,9 +47,13 @@ elseif($action =='add_entraineur')
         include('../index/indexbase.php');
     }
 }
+elseif($action == 'remplir_option_entraineur')
+{
+    require_once('../entraineur_manager/entraineur_add.php');
+}
 elseif($action == 'afficher_entraineur')
 {
    $entraineurID = $_POST['entraineurID'];
-    print_r($entraineurID);
+
     $entraineur = get_entraineurID_by_ID($entraineurID);
 }
