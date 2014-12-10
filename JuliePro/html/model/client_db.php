@@ -14,6 +14,7 @@ function get_client_by_ID($clientID)
     $query = "SELECT * FROM client
               where clientID = '$clientID'";
     $client = $db->query($query);
+    $client = $client->fetch();
     return  $client;
 }
 function get_client_by_name($nom)
