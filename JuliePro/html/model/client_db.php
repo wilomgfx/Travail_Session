@@ -5,9 +5,8 @@ function get_client()
     global $db;
     $query = 'SELECT * FROM client
               ORDER BY clientID';
-    $client = $db->query($query);
-    $client = $client ->fetch();
-    return  $client;
+    $clients = $db->query($query);
+    return $clients;
 }
 function get_client_by_ID($clientID)
 {

@@ -9,16 +9,17 @@
             <table>
                  <tr>
                      <td align="right">
-                           Client:
-                         <input list="lstClient" name="listePersonne" value="Veuillez choisir un client">
-                         <datalist id="lstClient">
-                         <option value="Veuillez choisir un client.">
-                         <?php foreach($client as $clients) :
-                             $nom = $clients['nom'];
-                             $prenom = $clients['prenom']; ?>
-                         <option value="<?php echo $nom?>">
-                         <?php endforeach; ?>
-                         </datalist>
+                         <label>Client:</label>
+                         <select name="clientID">
+                             <?php foreach($client as $key => $clients) :
+                                 $id = $clients['clientID'];
+                                 $name = $clients['nom'];
+                                 ?>
+                                 <option value="<?php echo $id; ?>">
+                                     <?php echo $name; ?>
+                                 </option>
+                             <?php endforeach; ?>
+                         </select>
                      </td>
                      </tr>
                 <tr>
