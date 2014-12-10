@@ -25,6 +25,32 @@ if($action == 'Afficher'){
     include('entraineur_add.php');
 
 }
+if($action == 'Modifier'){
+
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $numTel = $_POST['tel'];
+    $numCell = $_POST['cell'];
+    $Adresse = $_POST['Adresse'];
+    $ville = $_POST['Ville'];
+    $codePostal = $_POST['CodePostal'];
+    $age = $_POST['Age'];
+    $courriel = $_POST['Courriel'];
+    $idEntraineur = $_POST['entraineurID'];
+
+    // Validate the inputs
+    if (empty($nom) || empty($prenom) || empty($numTel) || empty($numTel) || empty($numCell) || empty($Adresse) || empty($ville) || empty($codePostal) ||
+        empty($age) || empty($courriel)) {
+        $error = "Invalid product data. Check all fields and try again.";
+        include('../errors/error.php');
+    }else{
+        update_entraineur($nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$courriel,$idEntraineur);
+        echo "<script type='text/javascript'>alert('Entraineur : '+ '$nom' + ' modifié avec succès!')</script>";
+        include('../index/indexbase.php');
+    }
+
+
+}
 
 if($action =='add_entraineur')
 {

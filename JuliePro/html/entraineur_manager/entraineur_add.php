@@ -29,28 +29,30 @@
             </form>
             <!--  Afficher infos de l'entraineur selectionné          -->
             <?php if (isset($entraineur)) : ?>
-            <form class ="grille_12" action="index.php">
+            <form class ="grille_12" action="index.php" method="post">
+                <!-- Pour avoir le id de l'entraineur -->
+                <input type="hidden" value="<?php echo $entraineur['entraineurID'] ;?>" name="entraineurID">
 
                 <input type="hidden" value="Modifier" name="action">
                 <table>
                     <tr>
                         <td align="right">
                             Nom:
-                            <input type="text" name="Nom" value="<?php echo $entraineur['nom'] ;?>">
+                            <input type="text" name="nom" value="<?php echo $entraineur['nom'] ;?>">
                         </td>
                         <td align="right">
                             Prenom:
-                            <input type="text" name="Prenom" value="<?php echo $entraineur['prenom'] ;?>">
+                            <input type="text" name="prenom" value="<?php echo $entraineur['prenom'] ;?>">
                         </td>
                     </tr>
                     <tr>
                         <td align="right">
                             No téléphone:
-                            <input type="text" name="Tel" value="<?php echo $entraineur['numTel'] ;?>">
+                            <input type="text" name="tel" value="<?php echo $entraineur['numTel'] ;?>">
                         </td>
                         <td align="right">
                             No Cellulaire:
-                            <input type="text" name="Cell" value="<?php echo $entraineur['numCell'] ;?>">
+                            <input type="text" name="cell" value="<?php echo $entraineur['numCell'] ;?>">
                         </td>
                     </tr>
                     <tr>

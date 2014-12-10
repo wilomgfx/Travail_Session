@@ -42,10 +42,10 @@ function update_utilisateurID_by_entraineurID($entraineurID,$utilisateurID){
     $db->exec($query);
 }
 
-function update_entraineur($entraineurID,$nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$courriel) {
+function update_entraineur($nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$courriel,$idEntraineur) {
     global $db;
     $query = "UPDATE entraineur
-              SET entraineurID = '$entraineurID',
+              SET
                   nom = '$nom',
                   prenom = '$prenom',
                   numTel = '$numTel',
@@ -53,9 +53,9 @@ function update_entraineur($entraineurID,$nom, $prenom, $numTel,$numCell,$Adress
                   adresse = '$Adresse',
                   ville = '$ville',
                   codePostal = '$codePostal',
-                  age = '$age',
+                  age = $age,
                   courriel = '$courriel'
-               WHERE nom = '$nom'";
+               WHERE entraineurID = $idEntraineur";
     $db->exec($query);
 }
 ?>
