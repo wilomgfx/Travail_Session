@@ -5,7 +5,7 @@ require('../model/utilisateur_db.php');
 
 
 $entraineurs = get_entraineurs();
-
+print_r($entraineurs);
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
 } else if (isset($_GET['action'])) {

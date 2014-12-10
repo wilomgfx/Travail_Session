@@ -9,17 +9,19 @@
                 <table>
                     <tr>
                         <td align="right">
-                            Entraineur:
-                            <input list="lstEntraineur" name="listePersonne">
-                            <?php foreach($entraineurs as $entraineur):
-                                $nom = $entraineur['nom'];
-                                $prenom  = $entraineur['prenom'];
-                            ?>
-
-                            <datalist id="lstEntraineur">
-                                <option value="<?php echo $nom;?>">
-                            </datalist>
-                           <?php endforeach; ?>
+                            <label>Entraineur : </label>
+                            <select name="entraineurID">
+                                <?php foreach($entraineurs as $entraineur) :
+                                    $nom = $entraineur['nom'];
+                                    $prenom  = $entraineur['prenom'];
+                                    $entraineur_full_name = $prenom.$nom;
+                                    $id = $entraineur['entraineurID'];
+                                    ?>
+                                    <option value="davai">
+                                        <?php echo $nom; ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
                         </td>
                     </tr>
                     <tr>
