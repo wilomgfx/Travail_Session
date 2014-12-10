@@ -14,16 +14,14 @@ function get_client_by_ID($clientID)
     $query = "SELECT * FROM client
               where clientID = '$clientID'";
     $client = $db->query($query);
-    $client = $client ->fetch();
     return  $client;
 }
-function get_client_by_name($nom, $prenom)
+function get_client_by_name($nom)
 {
     global $db;
     $query = "SELECT * FROM client
-              where nom = '$nom' and prenom='$prenom'";
+              where nom = '$nom'";
     $client = $db->query($query);
-    $client = $client ->fetch();
     return  $client;
 }
 function inscrire_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $CodePostal, $Age, $DateInsc, $Courriel, $UtilisateurID,$EntraineurID)

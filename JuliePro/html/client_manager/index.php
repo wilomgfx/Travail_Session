@@ -25,7 +25,9 @@ if($action == 'Afficher'){
 }
 if($action == 'Modifier')
 {
-
+    $ClientID = $_POST['clientID'];
+    $client = get_client_by_ID($ClientID);
+    include('client_add.php');
 }
 if($action == 'Inscrire')
 {
