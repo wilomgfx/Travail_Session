@@ -24,7 +24,6 @@ function get_entraineurs(){
     $query = "SELECT * FROM entraineur
               ORDER  by entraineurID                     ";
     $entraineurs = $db->query($query);
-    $entraineurs = $entraineurs->fetch();
     return $entraineurs;
 }
 
