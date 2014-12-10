@@ -36,17 +36,14 @@ function inscrire_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $Code
     $db->exec($query);
     $db->exec($query3);
 }
-function modifier_client($clientID, $Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $CodePostal, $Age, $Courriel)
+function modifier_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $CodePostal, $Age, $Courriel,$ClientID)
 {
     global $db;
     $query = "UPDATE client
               SET nom ='$Nom', prenom ='$Prenom', numTel ='$NoTel', numCell='$NoCell', adresse='$Adresse', ville='$Ville', codePostal='$CodePostal', age='$Age',  courriel='$Courriel'
-              WHERE clientID = '$clientID'";
-    $query2 = "SET FOREIGN_KEY_CHECKS = 0;";
-    $query3 = "SET FOREIGN_KEY_CHECKS = 1;";
-    $db->exec($query2);
+              WHERE clientID = '$ClientID'";
     $db->exec($query);
-    $db->exec($query3);
+
 
 }
 

@@ -37,10 +37,11 @@ if($action == 'Modifier')
     $CodePostal = $_POST['CodePostal'];
     $Age = $_POST['Age'];
     $Courriel = $_POST['Courriel'];
-    $Client = get_client_by_name($Nom);
-    $ClientID = $Client['clientID'];
+    $ClientID = $_POST['clientID'];
 
-     modifier_client($ClientID,$Nom,$Prenom, $NoTel,$NoCell,$Adresse,$Ville,$CodePostal,$Age,$Courriel);
+     modifier_client($Nom,$Prenom, $NoTel,$NoCell,$Adresse,$Ville,$CodePostal,$Age,$Courriel,$ClientID);
+    //Pour montrer que le client est bien modifié
+    echo "<script type='text/javascript'>alert('Client : '+ '$Nom' + ' modifié avec succès!')</script>";
 
     include('client_add.php');
 }
@@ -65,7 +66,8 @@ if($action == 'Inscrire')
     $EntraineurID = get_entraineurID_by_name($Entraineur);
 
     inscrire_client($Nom,$Prenom,$NoTel,$NoCell,$Adresse,$Ville,$CodePostal,$Age,$DateInsc,$Courriel,$UtilisateurID,$EntraineurID);
-
+    //Pour montrer que le client est bien ajouté
+    echo "<script type='text/javascript'>alert('Client : '+ '$Nom' + ' ajouté avec succès!')</script>";
     include('client_add.php');
 }
 ?>

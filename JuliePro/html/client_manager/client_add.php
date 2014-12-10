@@ -29,6 +29,8 @@
             </form>
             <?php if (isset($client)) : ?>
             <form class ="grille_12" action="index.php"  method="post">
+                <!-- Pour avoir le id de l'entraineur -->
+                <input type="hidden" value="<?php echo $client['clientID'] ;?>" name="clientID">
 
             <input type="hidden" value="Modifier" name="action">
             <table>
