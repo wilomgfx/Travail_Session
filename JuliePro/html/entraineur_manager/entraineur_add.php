@@ -14,11 +14,7 @@
                             <?php foreach($entraineurs as $entraineur):
                                 $nom = $entraineur['nom'];
                                 $prenom  = $entraineur['prenom'];
-
-
-
-
-                                ?>
+                            ?>
 
                             <datalist id="lstEntraineur">
                                 <option value="<?php echo $nom;?>">
