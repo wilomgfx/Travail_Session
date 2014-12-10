@@ -47,13 +47,11 @@ elseif($action =='add_entraineur')
         include('../index/indexbase.php');
     }
 }
-elseif($action == 'remplir_option_entraineur')
-{
-    require_once('../entraineur_manager/entraineur_add.php');
-}
-elseif($action == 'afficher_entraineur')
-{
-   $entraineurID = $_POST['entraineurID'];
-
+if($action == 'Afficher'){
+    $entraineurID = $_POST['entraineurID'];
     $entraineur = get_entraineurID_by_ID($entraineurID);
+    include('entraineur_add.php');
+    print_r($entraineur);
+
 }
+

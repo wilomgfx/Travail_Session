@@ -5,7 +5,7 @@
         <div class="wrapper">
             <h2>Information Entraineur</h2>
             <form class ="grille_12" action="index.php" method="post">
-                <input type="hidden" value="remplir_option_entraineur" name="action">
+                <input type="hidden" value="Afficher" name="action">
                 <table>
                     <tr>
                         <td align="right">
@@ -15,7 +15,7 @@
                                     $nom = $entraineur['nom'];
                                     $id = $entraineur['entraineurID'];
                                     ?>
-                                    <option value="<?php echo $id; ?>">
+                                    <option  value="<?php echo $id; ?>">
                                         <?php echo $nom; ?>
                                     </option>
                                 <?php endforeach; ?>
