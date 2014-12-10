@@ -112,7 +112,7 @@
             <table>
                 <tr>
                     <td align="right">Username: <input type="text" name="Username"</td>
-                    <td align="right">Password: <input type="text" name="Password"</td>
+                    <td align="right">Password: <input type="password" name="Password"</td>
                     <td align="right"> Statut: <input list="lstStatut" name="LstStatut">
                                       <datalist id="lstStatut">
                                       <option value="utilisateur">

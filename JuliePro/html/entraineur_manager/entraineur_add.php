@@ -11,9 +11,17 @@
                         <td align="right">
                             Entraineur:
                             <input list="lstEntraineur" name="listePersonne">
-                            <?php foreach($entraineurs as $entraineur):?>
+                            <?php foreach($entraineurs as $entraineur):
+                                $nom = $entraineur['nom'];
+                                $prenom  = $entraineur['prenom'];
+
+
+
+
+                                ?>
+
                             <datalist id="lstEntraineur">
-                                <option value="<?php echo $entraineur['nom'];?>">
+                                <option value="<?php echo $nom;?>">
                             </datalist>
                            <?php endforeach; ?>
                         </td>
@@ -104,7 +112,7 @@
                 <table>
                     <tr>
                         <td align="right">Nom d'usager: <input type="text" name="user"</td>
-                        <td align="right">Mot de passe: <input type="text" name="password"</td>
+                        <td align="right">Mot de passe: <input type="password" name="password"</td>
                         <td align="right"> Statut: <input list="lstStatut" name="statut">
                             <datalist id="lstStatut">
                                 <option value="utilisateur">

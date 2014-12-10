@@ -3,6 +3,9 @@ require('../model/database.php');
 require('../model/entraineur_db.php');
 require('../model/utilisateur_db.php');
 
+
+$entraineurs = get_entraineurs();
+
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
 } else if (isset($_GET['action'])) {
@@ -46,7 +49,5 @@ elseif($action =='add_entraineur')
 }
 elseif($action == 'afficher_entraineur')
 {
-    $entraineurs = get_entraineurs();
-    print_r($entraineurs);
-    include('../entraineur_manager/entraineur_add.php');
+
 }
