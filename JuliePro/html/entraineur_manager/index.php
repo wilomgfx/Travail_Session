@@ -46,6 +46,7 @@ elseif($action =='add_entraineur')
 }
 elseif($action == 'afficher_entraineur')
 {
-    $entraineurs = get_entraineur();
-
+    $entraineurs = get_entraineurs();
+    print_r($entraineurs);
+    include('../entraineur_manager/entraineur_add.php');
 }

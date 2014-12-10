@@ -23,7 +23,6 @@
                     </tr>
                 </table>
             </form>
-
             <form class ="grille_12" action="index.php">
 
                 <input type="hidden" value="Modifier" name="action">
