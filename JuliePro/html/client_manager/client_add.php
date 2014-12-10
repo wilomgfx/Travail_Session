@@ -1,6 +1,6 @@
 <?php include '../view/header.php'; ?>
 
-<!-- Section Consulter/Modifier Client -->
+<!-- Section Consulter/Modifier Clients -->
 <section>
     <div class="wrapper">
         <h2>Information Client</h2>
