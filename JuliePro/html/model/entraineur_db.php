@@ -1,14 +1,15 @@
 <?php
 function add_entraineur($nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$dateInscription ,$courriel,$userID) {
     global $db;
-    $query = "INSERT INTO entraineur
+    $query =
+              "SET FOREIGN_KEY_CHECKS = 0;
+              INSERT INTO entraineur
                  (nom, prenom, numTel,numCell,Adresse,ville,codePostal,age,dateInscription,courriel,FK_utilisateurID)
               VALUES
-                 ('$nom', '$prenom', '$numTel','$numCell','$Adresse','$ville','$codePostal',$age,$dateInscription ,'$courriel',$userID)";
+                 ('$nom', '$prenom', '$numTel','$numCell','$Adresse','$ville','$codePostal',$age,$dateInscription ,'$courriel',$userID)
+
+               SET FOREIGN_KEY_CHECKS = 1;";
     $db->exec($query);
-    //echo "<script type='text/javascript'>alert('$userID')</script>";
- //   $entraineurID = get_entraineurID_by_name($nom);
-    //update_utilisateurID_by_entraineurID($entraineurID,$userID);
 
 }
 function get_entraineurID_by_name($nom){
