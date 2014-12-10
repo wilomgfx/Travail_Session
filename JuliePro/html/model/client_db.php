@@ -18,6 +18,15 @@ function get_client_by_ID($clientID)
     $client = $client ->fetch();
     return  $client;
 }
+function get_client_by_name($nom, $prenom)
+{
+    global $db;
+    $query = "SELECT * FROM client
+              where nom = '$nom' and prenom='$prenom'";
+    $client = $db->query($query);
+    $client = $client ->fetch();
+    return  $client;
+}
 function inscrire_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $CodePostal, $Age, $DateInsc, $Courriel, $UtilisateurID,$EntraineurID)
 {
     global $db;

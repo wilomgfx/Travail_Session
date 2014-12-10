@@ -10,9 +10,12 @@
                  <tr>
                      <td align="right">
                            Client:
-                         <input list="lstClient" name="listePersonne">
+                         <input list="lstClient" name="listePersonne" value="Veuillez choisir un client">
                          <datalist id="lstClient">
-                         <option value="">
+                         <option value="Veuillez choisir un client.">
+                         <?php foreach($client as $clients) : ?>
+                         <option value="<?php echo $clients['nom'] . $clients['prenom'] ?>">
+                         <?php endforeach; ?>
                          </datalist>
                      </td>
                      </tr>
