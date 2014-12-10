@@ -25,6 +25,7 @@
                 <li><a href="../client_manager">Gestion Client</a></li>
                 <li><a href="../entraineur_manager/index.php">Gestion entraineur</a></li>
                 <li><a class="current" href="#">Logged in as : <?php echo $user['username'];?></a> </li>
+                <li><a href="../index/logout.php">X</a></li>
             </ul>
         </nav>
     </div>
