@@ -48,5 +48,7 @@ if($action == 'Inscrire')
     $EntraineurID = get_entraineurID_by_name($Entraineur);
 
     inscrire_client($Nom,$Prenom,$NoTel,$NoCell,$Adresse,$Ville,$CodePostal,$Age,$DateInsc,$Courriel,$UtilisateurID,$EntraineurID);
+
+    include('client_add.php');
 }
 ?>

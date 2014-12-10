@@ -30,9 +30,12 @@ function get_client_by_name($nom, $prenom)
 function inscrire_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $CodePostal, $Age, $DateInsc, $Courriel, $UtilisateurID,$EntraineurID)
 {
     global $db;
-    $query = "SET FOREIGN_KEY_CHECKS = 0; INSERT INTO client (nom, prenom, numTel, numCell, adresse, ville, codePostal, age, dateInscription, courriel, FK_utilisateurID,FK_entraineurID) VALUES('$Nom', '$Prenom', '$NoTel', '$NoCell', '$Adresse', '$Ville', '$CodePostal', '$Age', '$DateInsc', '$Courriel','$UtilisateurID', '$EntraineurID';SET FOREIGN_KEY_CHECKS = 1; )";
-    $client = $db->query($query);
-    return  $client;
+    $query = "INSERT INTO client (nom, prenom, numTel, numCell, adresse, ville, codePostal, age, dateInscription, courriel, FK_utilisateurID,FK_entraineurID) VALUES('$Nom', '$Prenom', '$NoTel', '$NoCell', '$Adresse', '$Ville', '$CodePostal', '$Age', '$DateInsc', '$Courriel','$UtilisateurID', '$EntraineurID')";
+    $query2 = "SET FOREIGN_KEY_CHECKS = 0;";
+    $query3 = "SET FOREIGN_KEY_CHECKS = 1;";
+    $db->exec($query2);
+    $db->exec($query);
+    $db->exec($query3);
 }
 function modifier_client($clientID, $Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $CodePostal, $Age, $DateInsc, $Courriel, $UtilisateurID,$EntraineurID)
 {
