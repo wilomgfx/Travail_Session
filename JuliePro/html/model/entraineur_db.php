@@ -19,6 +19,13 @@ function get_entraineurID_by_name($nom){
     $entraineurid = $entraineur['entraineurID'];
     return $entraineurid;
 }
+function get_entraineur(){
+    global $db;
+    $query = "SELECT * FROM entraineur
+              ORDER  by entraineurID                     ";
+    $entraineur = $db->query($query);
+    return $entraineur;
+}
 
 function update_utilisateurID_by_entraineurID($entraineurID,$utilisateurID){
     global $db;

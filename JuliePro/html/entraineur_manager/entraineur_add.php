@@ -5,15 +5,17 @@
         <div class="wrapper">
             <h2>Information Entraineur</h2>
             <form class ="grille_12" action="index.php" method="post">
-                <input type="hidden" value="Afficher" name="action">
+                <input type="hidden" value="afficher_entraineur" name="action">
                 <table>
                     <tr>
                         <td align="right">
                             Entraineur:
-                            <input list="lstClient" name="listePersonne">
-                            <datalist id="lstClient">
-                                <option value="">
+                            <input list="lstEntraineur" name="listePersonne">
+                            <?php foreach($entraineurs as $entraineur):?>
+                            <datalist id="lstEntraineur">
+                                <option value="<?php echo $entraineur['nom'];?>">
                             </datalist>
+                           <?php endforeach; ?>
                         </td>
                     </tr>
                     <tr>

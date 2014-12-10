@@ -44,3 +44,8 @@ elseif($action =='add_entraineur')
         include('../index/indexbase.php');
     }
 }
+elseif($action == 'afficher_entraineur')
+{
+    $entraineurs = get_entraineur();
+
+}
