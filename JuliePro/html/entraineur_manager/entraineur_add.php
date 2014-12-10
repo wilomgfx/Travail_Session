@@ -11,9 +11,9 @@
                         <td align="right">
                             <label>Entraineur : </label>
                             <select name="entraineurID">
-                                <?php foreach($entraineurs as $entraineur) :
-                                    $nom = $entraineur['nom'];
-                                    $id = $entraineur['entraineurID'];
+                                <?php foreach($entraineurs as $entraineur_afficher) :
+                                    $nom = $entraineur_afficher['nom'];
+                                    $id = $entraineur_afficher['entraineurID'];
                                     ?>
                                     <option  value="<?php echo $id; ?>">
                                         <?php echo $nom; ?>
@@ -28,9 +28,10 @@
                 </table>
             </form>
             <!--  Afficher infos de l'entraineur selectionné          -->
+            <?php if (isset($entraineur)) : ?>
             <form class ="grille_12" action="index.php">
 
-                <input type="hidden" value="afficher_entraineur" name="action">
+                <input type="hidden" value="Modifier" name="action">
                 <table>
                     <tr>
                         <td align="right">
@@ -96,7 +97,7 @@
 
                 </table>
             </form>
-
+            <?php endif; ?>
         </div>
     </section>
 

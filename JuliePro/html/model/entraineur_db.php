@@ -19,7 +19,7 @@ function get_entraineurID_by_name($nom){
     $entraineurid = $entraineur['entraineurID'];
     return $entraineurid;
 }
-function get_entraineurID_by_ID($id){
+function get_entraineur_by_ID($id){
     global $db;
     $query = "SELECT * FROM entraineur WHERE entraineurID = $id";
     $entraineur = $db->query($query);
