@@ -4,8 +4,7 @@ require('../model/entraineur_db.php');
 require('../model/utilisateur_db.php');
 
 
-$entraineurs = get_entraineurs();
-print_r($entraineurs);
+
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
 } else if (isset($_GET['action'])) {
@@ -15,7 +14,8 @@ if (isset($_POST['action'])) {
 }
 
 if ($action == 'entraineur_add') {
-include('entraineur_add.php');
+    $entraineurs = get_entraineurs();
+    include('entraineur_add.php');
 }
 
 elseif($action =='add_entraineur')

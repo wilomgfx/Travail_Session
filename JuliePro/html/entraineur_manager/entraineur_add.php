@@ -13,11 +13,9 @@
                             <select name="entraineurID">
                                 <?php foreach($entraineurs as $entraineur) :
                                     $nom = $entraineur['nom'];
-                                    $prenom  = $entraineur['prenom'];
-                                    $entraineur_full_name = $prenom.$nom;
                                     $id = $entraineur['entraineurID'];
                                     ?>
-                                    <option value="davai">
+                                    <option value="<?php echo $id; ?>">
                                         <?php echo $nom; ?>
                                     </option>
                                 <?php endforeach; ?>
