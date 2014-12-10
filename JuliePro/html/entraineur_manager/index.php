@@ -49,5 +49,7 @@ elseif($action =='add_entraineur')
 }
 elseif($action == 'afficher_entraineur')
 {
-
+   $entraineurID = $_POST['entraineurID'];
+    print_r($entraineurID);
+    $entraineur = get_entraineurID_by_ID($entraineurID);
 }
