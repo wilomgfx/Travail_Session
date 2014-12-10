@@ -32,7 +32,7 @@
                 <tr>
                     <td align="right">
                         Nom:
-                        <input type="text" name="Nom">
+                        <input type="text" name="Nom" value="">
                     </td>
                     <td align="right">
                         Prenom:
