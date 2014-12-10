@@ -13,8 +13,10 @@
                          <input list="lstClient" name="listePersonne" value="Veuillez choisir un client">
                          <datalist id="lstClient">
                          <option value="Veuillez choisir un client.">
-                         <?php foreach($client as $clients) : ?>
-                         <option value="<?php echo $clients['nom'] . $clients['prenom'] ?>">
+                         <?php foreach($client as $clients) :
+                             $nom = $clients['nom'];
+                             $prenom = $clients['prenom']; ?>
+                         <option value="<?php echo $nom?>">
                          <?php endforeach; ?>
                          </datalist>
                      </td>
