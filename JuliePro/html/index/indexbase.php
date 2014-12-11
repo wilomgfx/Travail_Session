@@ -1,4 +1,7 @@
 <?php include '../view/header.php'; ?>
+<?php require('../model/database.php'); ?>
+<?php require('../model/utilisateur_db.php'); ?>
+<?php require('../model/client_db.php'); ?>
 <!--  Section PROMO
 ========================================== -->
 

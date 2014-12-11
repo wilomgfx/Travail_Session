@@ -26,6 +26,17 @@ function get_client_by_name($nom)
     $client = $client->fetch();
     return  $client;
 }
+
+function get_client_by_userID($userID)
+{
+    global $db;
+    $query = "SELECT *
+              FROM client
+              WHERE FK_utilisateurID = $userID;";
+    $client = $db->query($query);
+    $client = $client->fetch();
+    return  $client;
+}
 function inscrire_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $CodePostal, $Age, $DateInsc, $Courriel, $UtilisateurID,$EntraineurID)
 {
     global $db;
@@ -43,7 +54,12 @@ function modifier_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $Code
               SET nom ='$Nom', prenom ='$Prenom', numTel ='$NoTel', numCell='$NoCell', adresse='$Adresse', ville='$Ville', codePostal='$CodePostal', age='$Age',  courriel='$Courriel'
               WHERE clientID = '$ClientID'";
     $db->exec($query);
+}
 
+// FONCTIONS RELATIVES AU CLIENT
+
+function get_rapports_quotidiens_by_clientID()
+{
 
 }
 
