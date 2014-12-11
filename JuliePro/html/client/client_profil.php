@@ -1,4 +1,9 @@
 <?php include '../view/header.php'; ?>
+<?php
+$userID = get_userID_by_username($_SESSION['user']['username']);
+$client = get_client_by_userID($userID);
+$entraineur = get_entraineur_by_ID($client['FK_entraineurID']);
+?>
 
 <div class="wrapper">
     <h2>Mon Profil</h2>
