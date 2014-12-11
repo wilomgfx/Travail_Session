@@ -80,7 +80,7 @@
                     <tr>
                         <td align="right">
                             Date inscription:
-                            <input type="date" name="DateInsc" value="<?php echo $entraineur['dateInscription'] ;?>">
+                            <input type="text" name="DateInsc" value="<?php echo $entraineur['dateInscription'] ;?>">
                         </td>
                     </tr>
 

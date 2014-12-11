@@ -6,7 +6,6 @@
     <form class ="grille_12" action="index.php"  method="post">
         <!-- Pour avoir le id de l'entraineur -->
         <input type="hidden" value="<?php echo $client['clientID'] ;?>" name="clientID">
-        <input type="hidden" value="Modifier" name="action">
         <table>
             <tr>
                 <td align="right">
@@ -60,15 +59,18 @@
 
             <tr>
                 <td align="right">
+                    Entraineur:
+                    <input type="text" name="Entraineur" value="<?php echo $entraineur ;?>" >
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">
                     Courriel:
                     <input type="email" name="Courriel" value="<?php echo $client['courriel'] ;?>" />
                 </td>
             </tr>
-            <tr>
-                <td align="right">
-                    <input type="submit" value="Modifier">
-                </td>
-            </tr>
+
 
         </table>
     </form>
