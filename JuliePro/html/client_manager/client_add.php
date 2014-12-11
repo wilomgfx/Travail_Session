@@ -79,7 +79,7 @@
                 <tr>
                     <td align="right">
                         Date inscription:
-                        <input type="date" name="DateInsc" value="<?php echo $client['dateInscription'] ;?>" />
+                        <input type="text" name="DateInsc" value="<?php echo $client['dateInscription'] ;?>" />
 
                     </td>
                 </tr>
