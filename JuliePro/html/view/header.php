@@ -32,7 +32,7 @@
                 <?php if ($user['statut'] == 'utilisateur') : ?>
                     <li><a href="../index/indexbase.php">Accueil</a></li>
                     <li><a href="../client">Profil</a></li>
-                    <li><a href="../client/client_rapport">Mon programme</a></li>
+                    <li><a href="../client/client_rapport.php">Mon programme</a></li>
                 <?php endif; ?>
                 <li><a class="current" href="#">Logged in as : <?php echo $user['username'];?></a> </li>
                 <li><a href="../index/logout.php">X</a></li>
