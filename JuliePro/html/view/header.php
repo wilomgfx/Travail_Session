@@ -17,13 +17,23 @@
 ========================================== -->
 <header>
     <div class="wrapper">
-        <!--<img id="logo" class="grille_4" src="img/logo-cinema-quebec.png" alt="Cinéma Québec"> -->
-
         <nav class="grille_12">
             <ul id="menu_header">
-                <li><a href="../index/indexbase.php">Accueil</a></li>
-                <li><a href="../client_manager">Gestion Client</a></li>
-                <li><a href="../entraineur_manager/index.php">Gestion entraineur</a></li>
+                <?php if ($user['statut'] == 'super_admin') : ?>
+                    <li><a href="../index/indexbase.php">Accueil</a></li>
+                    <li><a href="../client_manager">Gestion Client</a></li>
+                    <li><a href="../entraineur_manager/index.php">Gestion entraineur</a></li>
+                <?php endif; ?>
+                <?php if ($user['statut'] == 'admin') : ?>
+                    <li><a href="../index/indexbase.php">Accueil</a></li>
+                    <li><a href="../entraineur">Profil</a></li>
+                    <li><a href="../entraineur/entraineur_gestion.php">Mes clients</a></li>
+                <?php endif; ?>
+                <?php if ($user['statut'] == 'utilisateur') : ?>
+                    <li><a href="../index/indexbase.php">Accueil</a></li>
+                    <li><a href="../client">Profil</a></li>
+                    <li><a href="../client/client_rapport">Mon programme</a></li>
+                <?php endif; ?>
                 <li><a class="current" href="#">Logged in as : <?php echo $user['username'];?></a> </li>
                 <li><a href="../index/logout.php">X</a></li>
             </ul>
