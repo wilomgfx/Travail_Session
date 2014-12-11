@@ -19,5 +19,8 @@ switch($action)
     case 'profil' :
         include('client_profil.php');
             break;
+    case 'rapport' :
+        include('client_rapport.php');
+             break;
 }
 ?>

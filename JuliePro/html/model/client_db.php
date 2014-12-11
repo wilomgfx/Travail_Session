@@ -58,8 +58,13 @@ function modifier_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $Code
 
 // FONCTIONS RELATIVES AU CLIENT
 
-function get_rapports_quotidiens_by_clientID()
+function get_rapports_quotidiens_by_clientID($clientID)
 {
-
+    global $db;
+    $query = "SELECT * FROM rapportquotidien
+              ORDER BY rapportquotidienID
+              WHERE FK_clientID = $$clientID;";
+    $rapports = $db->query($query);
+    return $rapports;
 }
 
