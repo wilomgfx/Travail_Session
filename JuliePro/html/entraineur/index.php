@@ -1,7 +1,20 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 1250824
- * Date: 14-12-11
- * Time: 08:58
- */ 
+require('../model/database.php');
+require('../model/entraineur_db.php');
+require('../model/utilisateur_db.php');
+
+if (isset($_POST['action'])) {
+$action = $_POST['action'];
+} else if (isset($_GET['action'])) {
+$action = $_GET['action'];
+} else {
+$action = 'entraineur_profil';
+}
+
+
+if(action == 'entraineur_profil')
+{
+    include('entraineur_profil.php');
+}
+
+?>
