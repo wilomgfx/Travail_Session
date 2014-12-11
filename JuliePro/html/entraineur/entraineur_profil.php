@@ -7,7 +7,7 @@ $entraineur = get_entraineur_by_userID($userID);
 <div class="wrapper">
 
     <h2>Mon Profil</h2>
-    
+
 <form class ="grille_12" action="index.php" method="post">
     <!-- Pour avoir le id de l'entraineur -->
     <input type="hidden" value="<?php echo $entraineur['entraineurID'] ;?>" name="entraineurID">
