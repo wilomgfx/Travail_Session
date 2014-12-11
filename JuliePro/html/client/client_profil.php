@@ -2,7 +2,7 @@
 <?php
 $userID = get_userID_by_username($_SESSION['user']['username']);
 $client = get_client_by_userID($userID);
-$entraineur = get_entraineur_by_ID($client['FK_entraineurID']);
+$entraineur = get_entraineur_by_ID($client['FK_entraineurID'])['nom'] . ' ' . get_entraineur_by_ID($client['FK_entraineurID'])['prenom'];
 ?>
 
 <div class="wrapper">
