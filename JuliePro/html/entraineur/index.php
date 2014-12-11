@@ -12,7 +12,7 @@ $action = 'entraineur_profil';
 }
 
 
-if(action == 'entraineur_profil')
+if($action == 'entraineur_profil')
 {
     include('entraineur_profil.php');
 }

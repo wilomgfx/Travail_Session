@@ -58,4 +58,14 @@ function update_entraineur($nom, $prenom, $numTel,$numCell,$Adresse,$ville,$code
                WHERE entraineurID = $idEntraineur";
     $db->exec($query);
 }
+function get_entraineur_by_userID($userID)
+{
+    global $db;
+    $query = "SELECT *
+              FROM entraineur
+              WHERE FK_utilisateurID = $userID;";
+    $entraineur = $db->query($query);
+    $entraineur = $entraineur->fetch();
+    return  $entraineur;
+}
 ?>
