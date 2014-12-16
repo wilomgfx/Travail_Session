@@ -39,7 +39,7 @@ $().ready(function() {
             },
             messages: {
                 Prenom: "Please enter your firstname",
-                nom: "Please enter your lastname",
+                Nom: "Please enter your lastname",
                 Username: {
                     required: "Please enter a username",
                     minlength: "Your username must consist of at least 2 characters"

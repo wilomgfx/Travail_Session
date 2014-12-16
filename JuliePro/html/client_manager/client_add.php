@@ -123,12 +123,12 @@
                 </tr>
                 <tr>
                     <td align="right">
-                        <label for="firstname">Nom:</label>
-                          <input type="text" name="Nom" id="Nom">
+                        <label for="firstname">Nom:
+                          <input type="text" name="Nom" id="Nom"></label>
                      </td>
                      <td align="right">
-                         <label for="firstname">Prénom:</label>
-                         <input type="text" name="Prenom" id="Prenom">
+                         <label for="firstname">Prénom:
+                         <input type="text" name="Prenom" id="Prenom"></label>
                     </td>
                  </tr>
                  <tr>
