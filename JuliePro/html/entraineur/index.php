@@ -95,10 +95,14 @@ if($action == 'NouveauxRendezVous')
 {
     $clientIDRendezVous = $_POST['clientIDRendezVous'];
     $clientIDRendezVous = $_POST['entraineurIDRendezVous'];
+
+    include('entraineur_rapport.php');
 }
 if($action == 'NouveauxObjectifs')
 {
     $clientIDRendezVous = $_POST['clientIDRendezVous'];
+
+    include('entraineur_rapport.php');
 }
 ?>
 
