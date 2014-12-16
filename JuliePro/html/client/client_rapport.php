@@ -136,7 +136,7 @@ $cpt = 0;
             <tr class="headerDeTable">
                 <th>Entrainement</th>
                 <th>Calorie Dépensées/Entrainement</th>
-                <th>Objectif Battements/<Minute></Minute></th>
+                <th>Objectif Battements/Minute</th>
                 <th>Calorie Ingérées par jour</th>
                 <th>Date</th>
             </tr>
