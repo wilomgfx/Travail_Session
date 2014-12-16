@@ -3,7 +3,8 @@ require('../model/database.php');
 require('../model/entraineur_db.php');
 require('../model/utilisateur_db.php');
 
-
+if (session_status() == PHP_SESSION_NONE)
+    session_start();
 
 if (isset($_POST['action'])) {
     $action = $_POST['action'];

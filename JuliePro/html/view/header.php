@@ -1,5 +1,8 @@
 <!-- On garde la session -->
-<?php session_start(); ?>
+<?php
+if (session_status() == PHP_SESSION_NONE)
+    session_start();
+?>
 <?php $user = $_SESSION['user']; ?>
 <html lang="fr">
 <head>

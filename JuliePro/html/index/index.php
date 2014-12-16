@@ -2,6 +2,9 @@
 require('../model/database.php');
 require('../model/login.php');
 
+if (session_status() == PHP_SESSION_NONE)
+    session_start();
+
 if(isset($_POST['action']))
 {
     $action = $_POST['action'];
@@ -26,7 +29,8 @@ switch($action)
         {
             $lifetime = 0;
             session_set_cookie_params($lifetime, '/');
-            session_start();
+            if (session_status() == PHP_SESSION_NONE)
+                session_start();
             $_SESSION['user'] = array();
             $_SESSION['user'] = array('username' => $user['username'], 'password' => $user['password'], 'statut' => $user['statut']);
             include('successful.php');
