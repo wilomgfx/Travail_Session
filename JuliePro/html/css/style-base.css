@@ -187,7 +187,14 @@ header nav a:hover, .current {
     background-color: #FFDA02;
     border-radius: 5px;
 }*/
-
+/* validation error style */
+#inscriptionClient label.error {
+    margin-left: 10px;
+    width: auto;
+    display: inline;
+    color: red;
+    font-style: italic
+}
 /* Footer
 ================================================= */
 

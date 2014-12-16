@@ -13,29 +13,29 @@ $().ready(function() {
         $("#inscriptionClient").validate({
             rules: {
                 Prenom: "required",
-                nom: "required",
+                Nom: "required",
                 username: {
                     required: true,
                     minlength: 2
                 },
-                password: {
+                Password: {
                     required: true,
                     minlength: 5
                 },
-                confirm_password: {
-                    required: true,
-                    minlength: 5,
-                    equalTo: "#password"
+                Tel: {
+                    required:true,
+                    minlengh:13,
+                    maxlength:13
+                },
+                Cell: {
+                    required:true,
+                    minlengh:13,
+                    maxlength:13
                 },
                 email: {
                     required: true,
                     email: true
                 },
-                topic: {
-                    required: "#newsletter:checked",
-                    minlength: 2
-                },
-                agree: "required"
             },
             messages: {
                 Prenom: "Please enter your firstname",

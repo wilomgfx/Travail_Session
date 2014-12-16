@@ -1,6 +1,7 @@
 <?php include '../view/header.php'; ?>
 <script src="../javascript/jquery-2.1.1.js"></script>
 <script src="../javascript/jquery.validate.js"></script>
+    <script src="../javascript/validation.js"></script>
 <!-- Section Consulter/Modifier Clients -->
 <section>
     <div class="wrapper">
@@ -122,11 +123,11 @@
                 </tr>
                 <tr>
                     <td align="right">
-                          Nom:
+                        <label for="firstname">Nom:</label>
                           <input type="text" name="Nom" id="Nom">
                      </td>
                      <td align="right">
-                          Prenom:
+                         <label for="firstname">Prénom:</label>
                          <input type="text" name="Prenom" id="Prenom">
                     </td>
                  </tr>
