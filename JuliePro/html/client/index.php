@@ -20,10 +20,6 @@ switch($action)
         include('client_profil.php');
             break;
     case 'rapport' :
-        $userID = get_userID_by_username($_SESSION['user']['username']);
-        $client = get_client_by_userID($userID);
-        $entraineur = get_entraineur_by_ID($client['FK_entraineurID']);
-        $rapports = get_rapports_quotidiens_by_clientID($client['clientID']);
         include('client_rapport.php');
              break;
 }

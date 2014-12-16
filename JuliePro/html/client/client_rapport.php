@@ -1,18 +1,18 @@
 <?php include '../view/header.php'; ?>
 <?php
-//$userID = get_userID_by_username($_SESSION['user']['username']);
-//$client = get_client_by_userID($userID);
-//$entraineur = get_entraineur_by_ID($client['FK_entraineurID']);
-//$rapports = get_rapports_quotidiens_by_clientID($client['clientID']);
-//?>
+$userID = get_userID_by_username($_SESSION['user']['username']);
+$client = get_client_by_userID($userID);
+$entraineur = get_entraineur_by_ID($client['FK_entraineurID']);
+$rapports = get_rapports_quotidiens_by_clientID($client['clientID']);
+$cpt = 0;
+?>
 <div class="wrapper">
     <h2>Rapports quotidiens</h2>
-<?php print_r($client) ?>
     <form class="grille_12" action="." method="post">
         <table>
             <tr class="headerDeTable">
                 <th>Entrainement</th>
-                <th>Nomb    re de Calories / entrainement</th>
+                <th>Nombre de Calories / entrainement</th>
                 <th>Max Battement par minute</th>
                 <th>Calories Ingérées</th>
                 <th>Date</th>
@@ -44,7 +44,35 @@
                         $<?php $rap['poids']; ?>
                     </td>
                 </tr>
+                <?php $cpt++; ?>
             <?php endforeach; ?>
+            <?php
+                if($cpt == 0) :
+            ?>
+                    <tr>
+                        <td>
+                            Aucun
+                        </td>
+                        <td>
+                            Aucun
+                        </td>
+                        <td>
+                            Aucun
+                        </td>
+                        <td>
+                            Aucun
+                        </td>
+                        <td>
+                            Aucun
+                        </td>
+                        <td>
+                            Aucun
+                        </td>
+                        <td>
+                            Aucun
+                        </td>
+                    </tr>
+            <?php endif; ?>
         </table>
     </form>
 </div>
