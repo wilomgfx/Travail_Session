@@ -76,6 +76,52 @@ $cpt = 0;
             <?php endif; ?>
         </table>
     </form>
+    <form class="grille_12" action="." method="post">
+        <input type="hidden" name="action" value="ajouter_rapport"/>
+        <input type="hidden" name="clientIDAjout" value="<?php echo $client['clientID']; ?>" />
+        <h3>Nouveau rapport :</h3>
+        <table>
+            <tr class="headerDeTable">
+                <th>Entrainement</th>
+                <th>Nombre de Calories / entrainement</th>
+                <th>Max Battement par minute</th>
+                <th>Calories Ingérées</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="entrainementAjout" />
+                </td>
+                <td>
+                    <input type="text" name="nbrCaloriesEntrainementAjout" />
+                </td>
+                <td>
+                    <input type="text" name="maxBattementParMinuteAjout" />
+                </td>
+                <td>
+                    <input type="text" name="nbrCaloriesIngereAjout" />
+                </td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <th>VO2 Max</th>
+                <th>Poids</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="dateAjout" />
+                </td>
+                <td>
+                    <input type="text" name="vo2MaxAjout" />
+                </td>
+                <td>
+                    <input type="text" name="poidsAjout" />
+                </td>
+                <td>
+                    <input type="submit" value="Ajouter" />
+                </td>
+            </tr>
+        </table>
+    </form>
     </div>
 <div class="wrapper">
     <?php

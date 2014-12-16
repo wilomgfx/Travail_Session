@@ -66,33 +66,33 @@ function modifier_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $Code
 
 // FONCTIONS RELATIVES AU CLIENT
 
-function get_rapports_quotidiens_by_clientID($clientID)
-{
-    global $db;
-    $query = "SELECT * FROM rapportquotidien
-              WHERE FK_clientID = $clientID
-              ORDER BY dateEntrainement";
-    $rapports = $db->query($query);
-    return $rapports;
-}
+//function get_rapports_quotidiens_by_clientID($clientID)
+//{
+//    global $db;
+//    $query = "SELECT * FROM rapportquotidien
+//              WHERE FK_clientID = $clientID
+//              ORDER BY dateEntrainement";
+//    $rapports = $db->query($query);
+//    return $rapports;
+//}
 
-function get_rendezvous_by_clientID($clientID)
-{
-    global $db;
-    $query = "SELECT * FROM rendezvous
-              WHERE FK_clientID = $clientID
-              ORDER BY date";
-    $rapports = $db->query($query);
-    return $rapports;
-}
+//function get_rendezvous_by_clientID($clientID)
+//{
+//    global $db;
+//    $query = "SELECT * FROM rendezvous
+//              WHERE FK_clientID = $clientID
+//              ORDER BY date";
+//    $rapports = $db->query($query);
+//    return $rapports;
+//}
 
-function get_objectifs_by_clientID($clientID)
-{
-    global $db;
-    $query = "SELECT * FROM objectif
-              WHERE FK_clientID = $clientID
-              ORDER BY date";
-    $objectifs = $db->query($query);
-    return $objectifs;
-}
+//function get_objectifs_by_clientID($clientID)
+//{
+//    global $db;
+//    $query = "SELECT * FROM objectif
+//              WHERE FK_clientID = $clientID
+//              ORDER BY date";
+//    $objectifs = $db->query($query);
+//    return $objectifs;
+//}
 
