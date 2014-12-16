@@ -78,7 +78,8 @@ if($action =='add_entraineur')
         add_entraineur($nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$dateInscription ,$courriel,$userID);
 
         echo "<script type='text/javascript'>alert('Entraineur : '+ '$nom' + ' ajouté avec succès!')</script>";
-        include('../index/indexbase.php');
+
+        header('Location: index.php?action=entraineur_add');
     }
 }
 

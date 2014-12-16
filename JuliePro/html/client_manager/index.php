@@ -70,4 +70,9 @@ if($action == 'Inscrire')
     echo "<script type='text/javascript'>alert('Client : '+ '$Nom' + ' ajouté avec succès!')</script>";
     include('client_add.php');
 }
+
+if($action == 'rapport')
+{
+
+}
 ?>
