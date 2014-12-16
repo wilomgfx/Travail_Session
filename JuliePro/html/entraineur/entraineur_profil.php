@@ -1,5 +1,7 @@
 <?php include '../view/header.php'; ?>
 <?php
+if (session_status() == PHP_SESSION_NONE)
+    session_start();
 $userID = get_userID_by_username($_SESSION['user']['username']);
 $entraineur = get_entraineur_by_userID($userID);
 ?>

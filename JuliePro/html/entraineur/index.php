@@ -19,7 +19,7 @@ $action = 'entraineur_profil';
 $userid = get_userID_by_username($_SESSION['user']['username']);
 $Entraineur = get_entraineur_by_userID($userid);
 //$clients = get_client();
-$client = get_client_by_entraineur($Entraineur['entraineurID']);
+$clients = get_client_by_entraineur($Entraineur['entraineurID']);
 
 if($action == 'entraineur_profil')
 {
@@ -85,6 +85,9 @@ if($action == 'mesClients' )
 {
     include('entraineur_gestion.php');
 }
+if($action == 'obtenirRapport' )
+{
+    include('entraineur_rapport.php');
+}
 ?>
 
-?>

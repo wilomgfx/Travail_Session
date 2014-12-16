@@ -1,5 +1,7 @@
 <?php
 include '../view/header.php';
+if (session_status() == PHP_SESSION_NONE)
+    session_start();
 $userID = get_userID_by_username($_SESSION['user']['username']);
 $entraineur = get_entraineur_by_userID($userID);
 ?>
@@ -101,6 +103,10 @@ $entraineur = get_entraineur_by_userID($userID);
                         </tr>
 
                     </table>
+                </form>
+                <form class ="grille_12" action="index.php" method="post">
+                    <input type="hidden" value="obtenirRapport" name="action">
+                  <input type="submit" value="obtenirRapport">
                 </form>
             <?php endif; ?>
         </div>
