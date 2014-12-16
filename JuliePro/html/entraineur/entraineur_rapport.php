@@ -195,7 +195,7 @@ $cpt = 0;
                 </tr>
                 <tr>
                     <td><input type="text" name="Date"></td>
-                    <td><input type="text" name="Date" value="<?php $entraineur['nom'] ?>"></td>
+                    <td><?php echo $entraineur['nom']; ?></td>
                     <td><input type="submit" value="Envoyez" name="NouveauxRendezVous"></td>
                 </tr>
             </table>
