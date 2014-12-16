@@ -71,7 +71,7 @@ function get_rapports_quotidiens_by_clientID($clientID)
     global $db;
     $query = "SELECT * FROM rapportquotidien
               WHERE FK_clientID = $clientID
-              ORDER BY rapportquotidienID";
+              ORDER BY dateEntrainement";
     $rapports = $db->query($query);
     return $rapports;
 }
@@ -81,7 +81,7 @@ function get_rendezvous_by_clientID($clientID)
     global $db;
     $query = "SELECT * FROM rendezvous
               WHERE FK_clientID = $clientID
-              ORDER BY rendezVousID";
+              ORDER BY date";
     $rapports = $db->query($query);
     return $rapports;
 }
@@ -91,7 +91,7 @@ function get_objectifs_by_clientID($clientID)
     global $db;
     $query = "SELECT * FROM objectif
               WHERE FK_clientID = $clientID
-              ORDER BY objectifID";
+              ORDER BY date";
     $objectifs = $db->query($query);
     return $objectifs;
 }

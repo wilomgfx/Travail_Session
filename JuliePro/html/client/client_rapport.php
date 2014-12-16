@@ -27,22 +27,22 @@ $cpt = 0;
                         <?php echo $rap['entrainement']; ?>
                     </td>
                     <td>
-                        $<?php echo $rap['nbrCalorieDepense']; ?>
+                        <?php echo $rap['nbrCalorieDepense']; ?>
                     </td>
                     <td>
-                        $<?php $rap['maxBattement']; ?>
+                        <?php echo $rap['maxBattement']; ?>
                     </td>
                     <td>
-                        $<?php $rap['nbrCalorieIngere']; ?>
+                        <?php echo $rap['nbrCalorieIngere']; ?>
                     </td>
                     <td>
-                        $<?php $rap['dateEntrainement']; ?>
+                        <?php echo $rap['dateEntrainement']; ?>
                     </td>
                     <td>
-                        $<?php $rap['vo2Max ']; ?>
+                        <?php echo $rap['vo2Max']; ?>
                     </td>
                     <td>
-                        $<?php $rap['poids']; ?>
+                        <?php echo $rap['poids']; ?>
                     </td>
                 </tr>
                 <?php $cpt++; ?>
@@ -76,11 +76,8 @@ $cpt = 0;
             <?php endif; ?>
         </table>
     </form>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    </div>
+<div class="wrapper">
     <?php
     $cpt2 = 0;
     $rendezVous = get_rendezvous_by_clientID($client['clientID']);
@@ -99,7 +96,7 @@ $cpt = 0;
                         <?php echo $rdv['date']; ?>
                     </td>
                     <td>
-                        $<?php
+                        <?php
                         $entraineur = get_entraineur_by_ID($rdv['FK_entraineurID']);
                         echo $entraineur['nom'];
                         ?>
@@ -121,16 +118,13 @@ $cpt = 0;
             <?php endif; ?>
         </table>
     </form>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+</div>
+<div class="wrapper">
     <?php
     $cpt3 = 0;
     $objectifs = get_objectifs_by_clientID($client['clientID']);
     ?>
-    <h2>Rendez-vous</h2>
+    <h2>Objectifs</h2>
     <form class="grille_12" action="." method="post">
         <table>
             <tr class="headerDeTable">
@@ -186,90 +180,4 @@ $cpt = 0;
     </form>
 </div>
 <?php include '../view/footer.php'; ?>
-
-<?php //include '../view/header.php'; ?>
-<?php
-//$userID = get_userID_by_username($_SESSION['user']['username']);
-//$client = get_client_by_userID($userID);
-//$entraineur = get_entraineur_by_ID($client['FK_entraineurID']);
-//?>
-<!---->
-<!--<div class="wrapper">-->
-<!--    <h2>Mon Profil</h2>-->
-<!---->
-<!--    <form class ="grille_12" action="index.php"  method="post">-->
-<!--        <!-- Pour avoir le id de l'entraineur -->-->
-<!--        <input type="hidden" value="--><?php //echo $client['clientID'] ;?><!--" name="clientID">-->
-<!--        <table>-->
-<!--            <tr>-->
-<!--                <td align="right">-->
-<!--                    Nom:-->
-<!--                    <input type="text" name="Nom" value="--><?php //echo $client['nom'] ;?><!--">-->
-<!--                </td>-->
-<!--                <td align="right">-->
-<!--                    Prenom:-->
-<!--                    <input type="text" name="Prenom" value="--><?php //echo $client['prenom'] ;?><!--" />-->
-<!--                </td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td align="right">-->
-<!--                    No téléphone:-->
-<!--                    <input type="text" name="Tel" value="--><?php //echo $client['numTel'] ;?><!--" />-->
-<!--                </td>-->
-<!--                <td align="right">-->
-<!--                    No Cellulaire:-->
-<!--                    <input type="text" name="Cell" value="--><?php //echo $client['numCell'] ;?><!--" />-->
-<!--                </td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td align="right">-->
-<!--                    Adresse:-->
-<!--                    <input type="text" name="Adresse" value="--><?php //echo $client['adresse'] ;?><!--" />-->
-<!--                </td>-->
-<!--                <td align="right">-->
-<!--                    Ville:-->
-<!--                    <input type="text" name="Ville" value="--><?php //echo $client['ville'] ;?><!--" />-->
-<!--                </td>-->
-<!--                <td align="right">-->
-<!--                    Code Postal:-->
-<!--                    <input type="text" name="CodePostal" value="--><?php //echo $client['codePostal'] ;?><!--" />-->
-<!--                </td>-->
-<!--            </tr>-->
-<!---->
-<!--            <tr>-->
-<!--                <td align="right">-->
-<!--                    Age:-->
-<!--                    <input type="number" name="Age" value="--><?php //echo $client['age'] ;?><!--" />-->
-<!--                </td>-->
-<!--            </tr>-->
-<!---->
-<!--            <tr>-->
-<!--                <td align="right">-->
-<!--                    Date inscription:-->
-<!--                    <input type="text" name="DateInsc" value="--><?php //echo $client['dateInscription'] ;?><!--" />-->
-<!---->
-<!--                </td>-->
-<!--            </tr>-->
-<!---->
-<!--            <tr>-->
-<!--                <td align="right">-->
-<!--                    Entraineur:-->
-<!--                    <input type="text" name="Entraineur" value="--><?php //echo $entraineur['nom'] ;?><!--" >-->
-<!--                </td>-->
-<!--            </tr>-->
-<!---->
-<!--            <tr>-->
-<!--                <td align="right">-->
-<!--                    Courriel:-->
-<!--                    <input type="email" name="Courriel" value="--><?php //echo $client['courriel'] ;?><!--" />-->
-<!--                </td>-->
-<!--            </tr>-->
-<!---->
-<!---->
-<!--        </table>-->
-<!--    </form>-->
-<!--</div>-->
-<!---->
-<!---->
-<?php //include '../view/footer.php'; ?>
 
