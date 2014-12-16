@@ -134,8 +134,8 @@ $cpt = 0;
     <form class="grille_12" action="." method="post">
         <table>
             <tr class="headerDeTable">
-                <th>Entrainement</th>
-                <th>Calorie Dépensées/Entrainement</th>
+                <th>Nombre d'entrainement</th>
+                <th>Calorie Dépensées/Semaine</th>
                 <th>Objectif Battements/Minute</th>
                 <th>Calorie Ingérées par jour</th>
                 <th>Date</th>
