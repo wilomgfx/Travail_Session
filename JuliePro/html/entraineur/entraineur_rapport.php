@@ -196,7 +196,7 @@ $cpt = 0;
                 <tr>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
-                    <td><input type="submit" value="Envoyez"></td>
+                    <td><input type="submit" value="Envoyez" name="NouveauxRendezVous"></td>
                 </tr>
             </table>
         </form>
@@ -221,7 +221,7 @@ $cpt = 0;
                  <td><input type="text"  name="ObjectifBatement"></td>
                  <td><input type="text"  name="CalorieIngérées"></td>
                  <td><input type="date"  name="Date"></td>
-                 <td><input type="submit"  value="Envoyez" name=""></td>
+                 <td><input type="submit"  value="Envoyez" name="NouveauxObjectifs"></td>
                 </tr>
             </table>
         </form>
