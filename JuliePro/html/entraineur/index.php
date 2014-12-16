@@ -87,6 +87,8 @@ if($action == 'mesClients' )
 }
 if($action == 'obtenirRapport' )
 {
+    $clientAAfficherID = $_POST['clientIDEnvoyer'];
+    $clientObtenu = get_client_by_ID($clientAAfficherID);
     include('entraineur_rapport.php');
 }
 ?>

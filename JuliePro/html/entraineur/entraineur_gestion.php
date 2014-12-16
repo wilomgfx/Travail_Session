@@ -104,8 +104,10 @@ $entraineur = get_entraineur_by_userID($userID);
 
                     </table>
                 </form>
+                <?php $clientEnvoyer = $client; ?>
                 <form class ="grille_12" action="index.php" method="post">
                     <input type="hidden" value="obtenirRapport" name="action">
+                    <input type="hidden" value="<?php echo $clientEnvoyer['clientID']; ?>" name="clientIDEnvoyer">
                   <input type="submit" value="obtenirRapport">
                 </form>
             <?php endif; ?>
