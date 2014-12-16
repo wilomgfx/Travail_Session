@@ -3,6 +3,10 @@ require('../model/database.php');
 require('../model/entraineur_db.php');
 require('../model/utilisateur_db.php');
 require('../model/client_db.php');
+require('../model/objectif_db.php');
+require('../model/rapportquotidient_db.php');
+require('../model/rendezvous_db.php');
+
 
 if (session_status() == PHP_SESSION_NONE)
     session_start();
