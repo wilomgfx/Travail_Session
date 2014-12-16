@@ -76,3 +76,23 @@ function get_rapports_quotidiens_by_clientID($clientID)
     return $rapports;
 }
 
+function get_rendezvous_by_clientID($clientID)
+{
+    global $db;
+    $query = "SELECT * FROM rendezvous
+              WHERE FK_clientID = $clientID
+              ORDER BY rendezVousID";
+    $rapports = $db->query($query);
+    return $rapports;
+}
+
+function get_objectifs_by_clientID($clientID)
+{
+    global $db;
+    $query = "SELECT * FROM objectif
+              WHERE FK_clientID = $clientID
+              ORDER BY objectifID";
+    $objectifs = $db->query($query);
+    return $objectifs;
+}
+

@@ -1,4 +1,5 @@
 <?php include '../view/header.php'; ?>
+<link href="../css/client_rapport.css" rel="stylesheet">
 <?php
 $userID = get_userID_by_username($_SESSION['user']['username']);
 $client = get_client_by_userID($userID);
@@ -72,6 +73,114 @@ $cpt = 0;
                             Aucun
                         </td>
                     </tr>
+            <?php endif; ?>
+        </table>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <?php
+    $cpt2 = 0;
+    $rendezVous = get_rendezvous_by_clientID($client['clientID']);
+    ?>
+    <h2>Rendez-vous</h2>
+    <form class="grille_12" action="." method="post">
+        <table>
+            <tr class="headerDeTable">
+                <th>Date</th>
+                <th>Entraineur</th>
+            </tr>
+            <?php foreach( $rendezVous as $rdv ) :
+                ?>
+                <tr>
+                    <td>
+                        <?php echo $rdv['date']; ?>
+                    </td>
+                    <td>
+                        $<?php
+                        $entraineur = get_entraineur_by_ID($rdv['FK_entraineurID']);
+                        echo $entraineur['nom'];
+                        ?>
+                    </td>
+                </tr>
+                <?php $cpt2++; ?>
+            <?php endforeach; ?>
+            <?php
+            if($cpt2 == 0) :
+                ?>
+                <tr>
+                    <td>
+                        Aucun
+                    </td>
+                    <td>
+                        Aucun
+                    </td>
+                </tr>
+            <?php endif; ?>
+        </table>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <?php
+    $cpt3 = 0;
+    $objectifs = get_objectifs_by_clientID($client['clientID']);
+    ?>
+    <h2>Rendez-vous</h2>
+    <form class="grille_12" action="." method="post">
+        <table>
+            <tr class="headerDeTable">
+                <th>Nombre D'Entrainement</th>
+                <th>Calorie Dépensées</th>
+                <th>Objectif Battements</th>
+                <th>Calorie Ingérées par jour</th>
+                <th>Date</th>
+            </tr>
+            <?php foreach( $objectifs as $obj ) :
+                ?>
+                <tr>
+                    <td>
+                        <?php echo $obj['nbrEntrainement']; ?>
+                    </td>
+                    <td>
+                        <?php echo $obj['nbrCalorieDepenseSemaine']; ?>
+                    </td>
+                    <td>
+                        <?php echo $obj['maxBattementObj']; ?>
+                    </td>
+                    <td>
+                        <?php echo $obj['nbrCalorieIngereParJour']; ?>
+                    </td>
+                    <td>
+                        <?php echo $obj['date']; ?>
+                    </td>
+                </tr>
+                <?php $cpt3++; ?>
+            <?php endforeach; ?>
+            <?php
+            if($cpt3 == 0) :
+                ?>
+                <tr>
+                    <td>
+                        Aucun
+                    </td>
+                    <td>
+                        Aucun
+                    </td>
+                    <td>
+                        Aucun
+                    </td>
+                    <td>
+                        Aucun
+                    </td>
+                    <td>
+                        Aucun
+                    </td>
+                </tr>
             <?php endif; ?>
         </table>
     </form>
