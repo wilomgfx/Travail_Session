@@ -91,5 +91,14 @@ if($action == 'obtenirRapport' )
     $clientObtenu = get_client_by_ID($clientAAfficherID);
     include('entraineur_rapport.php');
 }
+if($action == 'NouveauxRendezVous')
+{
+    $clientIDRendezVous = $_POST['clientIDRendezVous'];
+    $clientIDRendezVous = $_POST['entraineurIDRendezVous'];
+}
+if($action == 'NouveauxObjectifs')
+{
+    $clientIDRendezVous = $_POST['clientIDRendezVous'];
+}
 ?>
 
