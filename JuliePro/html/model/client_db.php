@@ -62,8 +62,8 @@ function get_rapports_quotidiens_by_clientID($clientID)
 {
     global $db;
     $query = "SELECT * FROM rapportquotidien
-              ORDER BY rapportquotidienID
-              WHERE FK_clientID = $$clientID;";
+              WHERE FK_clientID = $$clientID
+              ORDER BY rapportquotidienID;";
     $rapports = $db->query($query);
     return $rapports;
 }
