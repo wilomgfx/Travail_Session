@@ -1,15 +1,13 @@
 /**
  * Created by 1252991 on 14-12-16.
  */
-$(document).ready(function(){
+$.validator.setDefaults({
+    submitHandler: function() {
+        alert("submitted!");
+    }
+});
 
-  $.validator.setDefaults({
-        submitHandler: function() {
-            alert("submitted!");
-        }
-    });
-
-    $().ready(function() {
+$().ready(function() {
 
         // validate signup form on keyup and submit
         $("#inscriptionClient").validate({
@@ -42,7 +40,7 @@ $(document).ready(function(){
             messages: {
                 Prenom: "Please enter your firstname",
                 nom: "Please enter your lastname",
-                username: {
+                Username: {
                     required: "Please enter a username",
                     minlength: "Your username must consist of at least 2 characters"
                 },
@@ -70,13 +68,3 @@ $(document).ready(function(){
         });
 
     });
-
-
-
-
-
-
-
-
-
-});
