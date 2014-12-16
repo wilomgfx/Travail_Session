@@ -1,5 +1,6 @@
 <?php include '../view/header.php'; ?>
-
+<script src="../javascript/jquery-2.1.1.js"></script>
+<script src="../javascript/jquery.validate.js"></script>
 <!-- Section Consulter/Modifier Clients -->
 <section>
     <div class="wrapper">
@@ -106,13 +107,13 @@
 <section>
     <div class="wrapper">
         <h2>Inscrire un Client</h2>
-         <form class ="grille_12" action="index.php"  method="post">
+         <form class ="grille_12" action="index.php"  method="post" id="inscriptionClient">
              <input type="hidden" value="Inscrire" name="action">
             <table>
                 <tr>
-                    <td align="right">Username: <input type="text" name="Username"</td>
-                    <td align="right">Password: <input type="password" name="Password"</td>
-                    <td align="right"> Statut: <input list="lstStatut" name="LstStatut">
+                    <td align="right">Username: <input type="text" name="Username" id="username"</td>
+                    <td align="right">Password: <input type="password" name="Password" id="password"</td>
+                    <td align="right"> Statut: <input list="lstStatut" name="LstStatut" id="statut">
                                       <datalist id="lstStatut">
                                       <option value="utilisateur">
                                       <option value="admin">
@@ -122,63 +123,63 @@
                 <tr>
                     <td align="right">
                           Nom:
-                          <input type="text" name="Nom">
+                          <input type="text" name="Nom" id="Nom">
                      </td>
                      <td align="right">
                           Prenom:
-                         <input type="text" name="Prenom">
+                         <input type="text" name="Prenom" id="Prenom">
                     </td>
                  </tr>
                  <tr>
                      <td align="right">
                         No téléphone:
-                        <input type="text" name="Tel">
+                        <input type="text" name="Tel" id="Tel">
                      </td>
                      <td align="right">
                         No Cellulaire:
-                         <input type="text" name="Cell">
+                         <input type="text" name="Cell" id="Cell">
                      </td>
                  </tr>
                  <tr>
                      <td align="right">
                           Adresse:
-                         <input type="text" name="Adresse">
+                         <input type="text" name="Adresse" id="Adresse">
                      </td>
                     <td align="right">
                           Ville:
-                         <input type="text" name="Ville">
+                         <input type="text" name="Ville" id="Ville">
                      </td>
                       <td align="right">
                           Code Postal:
-                         <input type="text" name="CodePostal">
+                         <input type="text" name="CodePostal" id="CodePostal">
                       </td>
                 </tr>
 
                  <tr>
                       <td align="right">
                          Age:
-                         <input type="number" name="Age">
+                         <input type="number" name="Age" id="Age">
                     </td>
                  </tr>
 
                   <tr>
                      <td align="right">
                         Date inscription:
-                         <input type="date" name="DateInsc">
+                         <input type="date" name="DateInsc" id="DateInsc">
                       </td>
                  </tr>
 
                  <tr>
                       <td align="right">
                           Courriel:
-                         <input type="email" name="Courriel">
+                         <input type="email" name="Courriel" id="Courriel">
                        </td>
                   </tr>
 
                   <tr>
                      <td align="right">
                           Nom de famille de l'Entraineur:
-                         <input type="text" name="Entraineur">
+                         <input type="text" name="Entraineur" id="Entraineur">
                      </td>
                   </tr>
                   <tr>

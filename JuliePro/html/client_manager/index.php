@@ -64,11 +64,17 @@ if($action == 'Inscrire')
     ajouter_utilisateur($username,$password,$statut);
     $UtilisateurID = get_userID_by_username($username);
     $EntraineurID = get_entraineurID_by_name($Entraineur);
-
+// Validate the inputs
+    if (empty($Nom) || empty($Prenom) || empty($NoTel) || empty($NoCell) || empty($numCell) || empty($Adresse) || empty($Ville) || empty($CodePostal) ||
+        empty($Age) || empty($DateInsc) || empty($Courriel) || empty($username) || empty($password) || empty($statut) || empty($Entraineur)) {
+        $error = "Invalid product data. Check all fields and try again.";
+        include('../errors/error.php');
+    } else {
     inscrire_client($Nom,$Prenom,$NoTel,$NoCell,$Adresse,$Ville,$CodePostal,$Age,$DateInsc,$Courriel,$UtilisateurID,$EntraineurID);
     //Pour montrer que le client est bien ajouté
     echo "<script type='text/javascript'>alert('Client : '+ '$Nom' + ' ajouté avec succès!')</script>";
     include('client_add.php');
+    }
 }
 
 if($action == 'rapport')
