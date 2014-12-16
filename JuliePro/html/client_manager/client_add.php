@@ -1,7 +1,7 @@
 <?php include '../view/header.php'; ?>
 <script src="../javascript/jquery-2.1.1.js"></script>
 <script src="../javascript/jquery.validate.js"></script>
-    <script src="../javascript/validation.js"></script>
+    <script src="../javascript/validationClient.js"></script>
 <!-- Section Consulter/Modifier Clients -->
 <section>
     <div class="wrapper">
