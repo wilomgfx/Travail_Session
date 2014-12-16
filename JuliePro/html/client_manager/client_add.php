@@ -177,7 +177,7 @@
 
                   <tr>
                      <td align="right">
-                          Entraineur:
+                          Nom de famille de l'Entraineur:
                          <input type="text" name="Entraineur">
                      </td>
                   </tr>
