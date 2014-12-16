@@ -27,7 +27,7 @@
                 <?php if ($user['statut'] == 'admin') : ?>
                     <li><a href="../index/indexbase.php">Accueil</a></li>
                     <li><a href="../entraineur">Profil</a></li>
-                    <li><a href="../entraineur/entraineur_gestion.php">Mes clients</a></li>
+                    <li><a href="../entraineur/index.php?action=mesClients">Mes clients</a></li>
                 <?php endif; ?>
                 <?php if ($user['statut'] == 'utilisateur') : ?>
                     <li><a href="../index/indexbase.php">Accueil</a></li>

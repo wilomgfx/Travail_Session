@@ -8,6 +8,14 @@ function get_client()
     $clients = $db->query($query);
     return $clients;
 }
+function get_client_by_entraineur($entraineurID)
+{
+    global $db;
+    $query = "SELECT * FROM client
+              where FK_entraineurID = '$entraineurID'";
+    $clients = $db->query($query);
+    return $clients;
+}
 function get_client_by_ID($clientID)
 {
     global $db;
