@@ -97,15 +97,24 @@ if($action == 'obtenirRapport' )
 }
 if($action == 'NouveauxRendezVous')
 {
+    $date = $_POST['clientIDRendezVous'];
+    $entraineurIDRendezVous = $_POST['entraineurIDRendezVous'];
     $clientIDRendezVous = $_POST['clientIDRendezVous'];
-    $clientIDRendezVous = $_POST['entraineurIDRendezVous'];
+
+    add_rendezVous($date,$entraineurIDRendezVous,$clientIDRendezVous);
 
     include('entraineur_rapport.php');
 }
 if($action == 'NouveauxObjectifs')
 {
+    $nbrEntrainement = $_POST['NombreEntrainement'];
+    $nbrCalorieDepensee = $_POST['CalorieDepensées'];
+    $maxBattementObj = $_POST['ObjectifBatement'];
+    $nbrCalorieIngere = $_POST['CalorieIngérées'];
+    $date = $_POST['Date'];
     $clientIDRendezVous = $_POST['clientIDRendezVous'];
 
+    add_objectif($nbrEntrainement,$nbrCalorieDepensee,$maxBattementObj,$nbrCalorieIngere,$date,$clientIDRendezVous);
     include('entraineur_rapport.php');
 }
 ?>
