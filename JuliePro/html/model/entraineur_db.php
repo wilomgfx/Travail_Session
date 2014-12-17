@@ -4,7 +4,7 @@ function add_entraineur($nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePos
     $query =" INSERT INTO entraineur
                  (nom, prenom, numTel,numCell,Adresse,ville,codePostal,age,dateInscription,courriel,FK_utilisateurID)
               VALUES
-                 ('$nom', '$prenom', '$numTel','$numCell','$Adresse','$ville','$codePostal',$age,$dateInscription ,'$courriel',$userID);";
+                 ('$nom', '$prenom', '$numTel','$numCell','$Adresse','$ville','$codePostal',$age,'$dateInscription' ,'$courriel',$userID);";
     $query2 = "SET FOREIGN_KEY_CHECKS = 0;";
     $query3 = "SET FOREIGN_KEY_CHECKS = 1;";
     $db->exec($query2);
