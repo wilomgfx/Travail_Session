@@ -98,7 +98,16 @@
                             <input type="submit" value="Modifier" >
                         </td>
                     </tr>
-
+                </table>
+            </form>
+            <form class="grille_12" action="index.php" method="post">
+                <input type="hidden" value="Supprimer" name="action">
+                <table>
+                    <tr>
+                        <td align="right">
+                            <input type="submit" value="Supprimer">
+                        </td>
+                    </tr>
                 </table>
             </form>
             <?php endif; ?>

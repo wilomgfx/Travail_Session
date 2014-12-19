@@ -79,9 +79,9 @@ if($action == 'Inscrire')
     include('client_add.php');
     }
 }
-
-if($action == 'rapport')
+if($action =="Supprimer")
 {
 
 }
+
 ?>
