@@ -1,7 +1,7 @@
 <?php include '../view/header.php'; ?>
 <script src="../javascript/jquery-2.1.1.js"></script>
 <script src="../javascript/jquery.validate.js"></script>
-    <script src="../javascript/validationClient.js"></script>
+<script src="../javascript/validationClient.js"></script>
 <!-- Section Consulter/Modifier Clients -->
 <section>
     <div class="wrapper">
@@ -112,9 +112,9 @@
              <input type="hidden" value="Inscrire" name="action">
             <table>
                 <tr>
-                    <td align="right">Username: <input type="text" name="Username" id="username"</td>
-                    <td align="right">Password: <input type="password" name="Password" id="password"</td>
-                    <td align="right"> Statut: <input list="lstStatut" name="LstStatut" id="statut">
+                    <td align="right">Nom d'utilisateur: <input type="text" name="Username" id="username"</td>
+                    <td align="right">Mot de passe: <input type="password" name="Password" id="password"</td>
+                    <td align="right"> Statut: <input list="lstStatut" name="lstStatut" id="statut">
                                       <datalist id="lstStatut">
                                       <option value="utilisateur">
                                       <option value="admin">

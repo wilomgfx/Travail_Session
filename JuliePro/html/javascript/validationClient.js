@@ -42,8 +42,23 @@ $().ready(function() {
                 },
                 Ville:{
                     required:true,
-
                 },
+                CodePostal:{
+                  required:true,
+                },
+                Age:{
+                  required:true,
+                },
+                Adresse:{
+                  required: true,
+                },
+                lstStatut:{
+                    required:true,
+                },
+                Entraineur:{
+                    required:true,
+                },
+
             },
             messages: {
                 Prenom: "Veuillez entrez votre prénom",
@@ -59,6 +74,16 @@ $().ready(function() {
                 Courriel: "Veuillez Entrez une adresse courriel valide",
                 DateInsc : "Veuillez entrer une date",
                 Ville: "Veuillez entrer votre ville",
+                Adresse: "Veuillez entrer votre adresse",
+                Age:"Veuillez entrer vote age",
+                Codepostal:"Veuillez entrer votre code postal",
+                lstStatut:"Veuillez entrer le statut du client",
+                Entraineur:"Veuillez entrer le nom de famille de L'entraineur à lier au client",
+                Cell:"Veuillez entrer votre numéro de cellulaire",
+                Tel:"Veuillez entrer votre numéro de teléphone",
+                CodePostal:"Veuillez entrer votre code postal",
+
+
             }
         });
 
