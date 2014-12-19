@@ -126,6 +126,7 @@ if($action == 'ajouterMessage')
     $message = $_POST['message'];
     $nomEntraineur = $_POST['nomEntraineur'];
     $FK_clientID = $_POST['clientID'];
+    $clientObtenu = get_client_by_ID($FK_clientID);
 
     add_message($message, $nomEntraineur, $FK_clientID);
 
