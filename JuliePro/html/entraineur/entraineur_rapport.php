@@ -275,9 +275,11 @@ $cpt = 0;
             <table>
                 <tr class="headerDeTable">
                     <th>Message</th>
+                    <th>Envoyer le message</th>
                 </tr>
                 <tr>
                     <td><input type="text"  name="message"></td>
+                    <td><input type="submit" value="Envoyer"></td>
                 </tr>
             </table>
         </form>
