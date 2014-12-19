@@ -64,3 +64,11 @@ function modifier_client($Nom, $Prenom, $NoTel, $NoCell, $Adresse, $Ville, $Code
     $db->exec($query);
 }
 
+function supprimer_client($clientID)
+{
+    global $db;
+    $query ="DELETE FROM client WHERE clientID = $clientID";
+    $db->exec($query);
+    return;
+}
+

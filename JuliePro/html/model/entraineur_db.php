@@ -68,4 +68,11 @@ function get_entraineur_by_userID($userID)
     $entraineur = $entraineur->fetch();
     return  $entraineur;
 }
+function supprimer_entrainer($entraineurID)
+{
+    global $db;
+    $query ="DELETE FROM entraineur WHERE entraineurID = $entraineurID";
+    $db->exec($query);
+    return;
+}
 ?>
