@@ -180,6 +180,45 @@ $cpt = 0;
     </form>
 </div>
 
+<div class="wrapper">
+    <?php
+    $cpt4 = 0;
+    $message = get_message_by_clientID($client['clientID']);
+    ?>
+    <h2>Messages</h2>
+    <form class="grille_12" action="." method="post">
+        <table>
+            <tr class="headerDeTable">
+                <th>Message</th>
+                <th>Nom de l'Entraineur</th>
+            </tr>
+            <?php foreach( $message as $msg ) :
+                ?>
+                <tr>
+                    <td>
+                        <?php echo $msg['message']; ?>
+                    </td>
+                    <td>
+                        <?php echo $msg['nomEntraineur']; ?>
+                    </td>
+                </tr>
+                <?php $cpt4++; ?>
+            <?php endforeach; ?>
+            <?php
+            if($cpt4 == 0) :
+                ?>
+                <tr>
+                    <td>
+                        Aucun
+                    </td>
+                    <td>
+                        Aucun
+                    </td>
+                </tr>
+            <?php endif; ?>
+        </table>
+    </form>
+</div>
 
 
     <div class="wrapper">
@@ -222,6 +261,23 @@ $cpt = 0;
                  <td><input type="text"  name="CalorieIngérées"></td>
                  <td><input type="date"  name="Date"></td>
                  <td><input type="submit"  value="Envoyez" name="NouveauxObjectifs"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div class="wrapper">
+        <h2>Nouveaux Messages</h2>
+        <form class ="grille_12" action="index.php" method="post">
+            <input type="hidden" value="ajouterMessage" name="action">
+            <input type="hidden" value="<?php echo $client['clientID']; ?>" name="clientID">
+            <input type="hidden" value="<?php echo $entraineur['nom']; ?>" name="nomEntraineur">
+            <table>
+                <tr class="headerDeTable">
+                    <th>Message</th>
+                </tr>
+                <tr>
+                    <td><input type="text"  name="message"></td>
                 </tr>
             </table>
         </form>

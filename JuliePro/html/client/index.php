@@ -6,6 +6,7 @@ require('../model/entraineur_db.php');
 require('../model/objectif_db.php');
 require('../model/rapportquotidien_db.php');
 require('../model/rendezvous_db.php');
+require('../model/message_db.php');
 
 if (session_status() == PHP_SESSION_NONE)
     session_start();

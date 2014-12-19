@@ -225,5 +225,45 @@ $cpt = 0;
         </table>
     </form>
 </div>
+
+<div class="wrapper">
+    <?php
+    $cpt4 = 0;
+    $message = get_message_by_clientID($client['clientID']);
+    ?>
+    <h2>Messages</h2>
+    <form class="grille_12" action="." method="post">
+        <table>
+            <tr class="headerDeTable">
+                <th>Message</th>
+                <th>Nom de l'Entraineur</th>
+            </tr>
+            <?php foreach( $message as $msg ) :
+                ?>
+                <tr>
+                    <td>
+                        <?php echo $msg['message']; ?>
+                    </td>
+                    <td>
+                        <?php echo $msg['nomEntraineur']; ?>
+                    </td>
+                </tr>
+                <?php $cpt4++; ?>
+            <?php endforeach; ?>
+            <?php
+            if($cpt4 == 0) :
+                ?>
+                <tr>
+                    <td>
+                        Aucun
+                    </td>
+                    <td>
+                        Aucun
+                    </td>
+                </tr>
+            <?php endif; ?>
+        </table>
+    </form>
+</div>
 <?php include '../view/footer.php'; ?>
 

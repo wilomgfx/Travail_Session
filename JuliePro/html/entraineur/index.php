@@ -6,6 +6,7 @@ require('../model/client_db.php');
 require('../model/objectif_db.php');
 require('../model/rapportquotidien_db.php');
 require('../model/rendezvous_db.php');
+require('../model/message_db.php');
 
 
 if (session_status() == PHP_SESSION_NONE)
@@ -118,6 +119,16 @@ if($action == 'NouveauxObjectifs')
     $clientObtenu = get_client_by_ID($clientIDRendezVous);
 
     add_objectif($nbrEntrainement,$nbrCalorieDepensee,$maxBattementObj,$nbrCalorieIngere,$date,$clientIDRendezVous);
+    include('entraineur_rapport.php');
+}
+if($action == 'ajouterMessage')
+{
+    $message = $_POST['message'];
+    $nomEntraineur = $_POST['nomEntraineur'];
+    $FK_clientID = $_POST['clientID'];
+
+    add_message($message, $nomEntraineur, $FK_clientID);
+
     include('entraineur_rapport.php');
 }
 ?>
