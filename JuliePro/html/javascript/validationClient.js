@@ -40,20 +40,25 @@ $().ready(function() {
                   required: true,
                   date : true
                 },
+                Ville:{
+                    required:true,
+
+                },
             },
             messages: {
-                Prenom: "Please enter your firstname",
-                Nom: "Please enter your lastname",
+                Prenom: "Veuillez entrez votre prénom",
+                Nom: "Veuillez entrez votre nom",
                 Username: {
-                    required: "Please enter a username",
-                    minlength: "Your username must consist of at least 2 characters"
+                    required: "Veuillez Entrez un nom d'utilisateur",
+                    minlength: "Votrenom d'utilisateur doit être d'au moins 2 charatères"
                 },
-                password: {
-                    required: "Please provide a password",
-                    minlength: "Your password must be at least 5 characters long"
+                Password: {
+                    required: "Veuillez Entrez un mot de passe",
+                    minlength: "Votre mot de passe doit être d'au moins 2 charatères"
                 },
-                Courriel: "Please enter a valid email address",
+                Courriel: "Veuillez Entrez une adresse courriel valide",
                 DateInsc : "Veuillez entrer une date",
+                Ville: "Veuillez entrer votre ville",
             }
         });
 
