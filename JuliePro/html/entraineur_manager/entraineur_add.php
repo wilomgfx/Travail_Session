@@ -102,6 +102,7 @@
             </form>
             <form class="grille_12" action="index.php" method="post">
                 <input type="hidden" value="Supprimer" name="action">
+                <input type="hidden" value="<?php echo $entraineur['entraineurID'] ;?>" name="entraineurID">
                 <table>
                     <tr>
                         <td align="right">

@@ -101,6 +101,7 @@
                 </table>
             </form>
                 <form class="grille_12" action="index.php" method="post">
+                    <input type="hidden" value="<?php echo $client['clientID'] ;?>" name="clientID">
                     <input type="hidden" value="Supprimer" name="action">
                     <table>
                         <tr>

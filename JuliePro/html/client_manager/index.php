@@ -81,7 +81,8 @@ if($action == 'Inscrire')
 }
 if($action =="Supprimer")
 {
-
+    $IDclient = $_POST['clientID'];
+    supprimer_client($IDclient);
 }
 
 ?>
