@@ -87,6 +87,7 @@ if($action =="Supprimer")
 {
     $id_entraineur= $_POST['entraineurID'];
     supprimer_entraineur($id_entraineur);
+    header('Location: index.php?action=entraineur_add');
 }
 
 

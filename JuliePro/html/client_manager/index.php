@@ -83,6 +83,7 @@ if($action =="Supprimer")
 {
     $IDclient = $_POST['clientID'];
     supprimer_client($IDclient);
+    include('client_add.php');
 }
 
 ?>
