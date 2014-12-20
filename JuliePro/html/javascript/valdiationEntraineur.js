@@ -69,7 +69,7 @@ $().ready(function() {
             },
             Password: {
                 required: "Veuillez Entrez un mot de passe",
-                minlength: "Votre mot de passe doit être d'au moins 2 charatères"
+                minlength: "Votre mot de passe doit être d'au moins 5 charatères"
             },
             Courriel: "Veuillez Entrez une adresse courriel valide",
             DateInsc : "Veuillez entrer une date",

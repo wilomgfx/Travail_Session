@@ -123,23 +123,18 @@
              <input type="hidden" value="Inscrire" name="action">
             <table>
                 <tr>
-                    <td align="right">Nom d'utilisateur: <input type="text" name="Username" id="username"</td>
-                    <td align="right">Mot de passe: <input type="password" name="Password" id="password"</td>
-                    <td align="right"> Statut: <input list="lstStatut" name="lstStatut" id="statut">
-                                      <datalist id="lstStatut">
-                                      <option value="utilisateur">
-                                      <option value="admin">
-                                      <option value="super_admin">
-                                      </datalist></td>
+                    <td align="right">Nom d'usager:<input type="text" name="Username" id="username"</td>
+                    <td align="right">Mot de passe:<input type="password" name="Password" id="password"</td>
+                    <td align="right"> Statut: <input list="lstStatut" name="lstStatut" value="utilisateur" readonly="readonly" id="statut"></td>
                 </tr>
                 <tr>
                     <td align="right">
-                        <label for="firstname">Nom:
-                          <input type="text" name="Nom" id="Nom"></label>
+                       Nom:
+                          <input type="text" name="Nom" id="Nom">
                      </td>
                      <td align="right">
-                         <label for="firstname">Prénom:
-                         <input type="text" name="Prenom" id="Prenom"></label>
+                         Prénom:
+                         <input type="text" name="Prenom" id="Prenom">
                     </td>
                  </tr>
                  <tr>
@@ -166,28 +161,24 @@
                          <input type="text" name="CodePostal" id="CodePostal">
                       </td>
                 </tr>
-
                  <tr>
                       <td align="right">
                          Age:
                          <input type="number" name="Age" id="Age">
                     </td>
                  </tr>
-
                   <tr>
                      <td align="right">
                         Date inscription:
                          <input type="date" name="DateInsc" id="DateInsc">
                       </td>
                  </tr>
-
                  <tr>
                       <td align="right">
                           Courriel:
                          <input type="email" name="Courriel" id="Courriel">
                        </td>
                   </tr>
-
                   <tr>
                      <td align="right">
                           Nom de famille de l'Entraineur:

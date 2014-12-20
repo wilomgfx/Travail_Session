@@ -126,13 +126,7 @@
                     <tr>
                         <td align="right">Nom d'usager: <input type="text" name="User"</td>
                         <td align="right">Mot de passe: <input type="password" name="Password"</td>
-                        <td align="right"> Statut: <input list="lstStatut" name="lstStatut" id="statut">
-                            <datalist id="lstStatut">
-                                <option value="utilisateur">
-                                <option value="admin">
-                                <option value="super_admin">
-                            </datalist>
-                        </td>
+                        <td align="right"> Statut: <input list="lstStatut" name="lstStatut" id="statut" value="admin" readonly="readonly"></td>
                     </tr>
                     <tr>
                         <td align="right">
@@ -140,7 +134,7 @@
                             <input type="text" name="Nom">
                         </td>
                         <td align="right">
-                            Prenom:
+                            Prénom:
                             <input type="text" name="Prenom">
                         </td>
                     </tr>

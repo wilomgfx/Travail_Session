@@ -55,13 +55,13 @@ if($action == 'Modifier'){
 
 if($action =='add_entraineur')
 {
-    $user = $_POST['user'];
-    $password = $_POST['password'];
+    $user = $_POST['User'];
+    $password = $_POST['Password'];
     $statut = $_POST['statut'];
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $numTel = $_POST['tel'];
-    $numCell = $_POST['cell'];
+    $nom = $_POST['Nom'];
+    $prenom = $_POST['Prenom'];
+    $numTel = $_POST['Tel'];
+    $numCell = $_POST['Cell'];
     $Adresse = $_POST['Adresse'];
     $ville = $_POST['Ville'];
     $codePostal = $_POST['CodePostal'];

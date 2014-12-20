@@ -62,7 +62,7 @@ if($action == 'Inscrire')
     $Courriel = $_POST['Courriel'];
     $username = $_POST['Username'];
     $password = $_POST['Password'];
-    $statut = $_POST['LstStatut'];
+    $statut = $_POST['statut'];
     $Entraineur = $_POST['Entraineur'];
     ajouter_utilisateur($username,$password,$statut);
     $UtilisateurID = get_userID_by_username($username);
