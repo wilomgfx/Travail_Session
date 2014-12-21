@@ -80,7 +80,7 @@ $cpt = 0;
         <input type="hidden" name="action" value="ajouter_rapport"/>
         <input type="hidden" name="clientIDAjout" value="<?php echo $client['clientID']; ?>" />
         <h3>Nouveau rapport :</h3>
-        <table>
+        <table id="rapport">
             <tr class="headerDeTable">
                 <th>Entrainement</th>
                 <th>Nombre de Calories / entrainement</th>
@@ -105,6 +105,7 @@ $cpt = 0;
                 <th>Date</th>
                 <th>VO2 Max</th>
                 <th>Poids</th>
+                <th>Ajouter</th>
             </tr>
             <tr>
                 <td>

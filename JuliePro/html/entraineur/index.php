@@ -98,6 +98,7 @@ if($action == 'obtenirRapport' )
 }
 if($action == 'NouveauxRendezVous')
 {
+    if(empty($_POST['Date']))return;
     $date = $_POST['Date'];
     $entraineurIDRendezVous = $_POST['entraineurIDRendezVous'];
     $clientIDRendezVous = $_POST['clientIDRendezVous'];

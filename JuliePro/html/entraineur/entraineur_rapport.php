@@ -233,9 +233,9 @@ $cpt = 0;
                     <th>Entraineur</th>
                 </tr>
                 <tr>
-                    <td><input type="text" name="Date"></td>
+                    <td><input type="text" name="Date" placeholder="aaaa / mm/ jj:hh/mm"></td>
                     <td><?php echo $entraineur['nom']; ?></td>
-                    <td><input type="submit" value="Envoyez" name="NouveauxRendezVous"></td>
+                    <td><input type="submit" value="Envoyer" name="NouveauxRendezVous"></td>
                 </tr>
             </table>
         </form>
@@ -259,8 +259,8 @@ $cpt = 0;
                  <td><input type="text"  name="CalorieDepensées"></td>
                  <td><input type="text"  name="ObjectifBatement"></td>
                  <td><input type="text"  name="CalorieIngérées"></td>
-                 <td><input type="date"  name="Date"></td>
-                 <td><input type="submit"  value="Envoyez" name="NouveauxObjectifs"></td>
+                 <td><input type="date"  name="Date" placeholder="aaaa / mm/ jj"></td>
+                 <td><input type="submit"  value="Envoyer" name="NouveauxObjectifs"></td>
                 </tr>
             </table>
         </form>

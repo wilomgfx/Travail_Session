@@ -1,3 +1,9 @@
-table, th, td {
-    border: 1px solid black;
+table, th, td{
+    border: 2px solid;
+    border-color: #64c8ef;;
+    background-color: lightgrey;
+    color:#3B3A39;
+}
+input {
+    background-color: #e0e0e0;
 }

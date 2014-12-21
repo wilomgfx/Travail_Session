@@ -18,13 +18,13 @@
 <?php $user = $_SESSION['user']; ?>
 
 <?php if ($user['statut'] == 'utilisateur') : ?>
-    <?php header("Refresh: 5; URL=indexbase.php"); ?>
+    <?php header("Refresh: 3; URL=indexbase.php"); ?>
 <?php endif; ?>
 
 <?php if ($user['statut'] == 'admin') : ?>
-    <?php header("Refresh: 5; URL=indexbase.php"); ?>
+    <?php header("Refresh: 3; URL=indexbase.php"); ?>
 <?php endif; ?>
 
 <?php if ($user['statut'] == 'super_admin') : ?>
-    <?php header("Refresh: 5; URL=indexbase.php"); ?>
+    <?php header("Refresh: 3; URL=indexbase.php"); ?>
 <?php endif; ?>

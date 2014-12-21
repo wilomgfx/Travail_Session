@@ -61,27 +61,27 @@ $().ready(function() {
 
             },
             messages: {
-                Prenom: "Veuillez entrez votre prénom",
-                Nom: "Veuillez entrez votre nom",
+                Prenom: "Veuillez entrez un prénom",
+                Nom: "Veuillez entrez un nom",
                 Username: {
                     required: "Veuillez Entrez un nom d'utilisateur",
-                    minlength: "Votrenom d'utilisateur doit être d'au moins 2 charatères"
+                    minlength: "Le nom d'utilisateur doit être d'au moins 2 charatères"
                 },
                 Password: {
                     required: "Veuillez Entrez un mot de passe",
-                    minlength: "Votre mot de passe doit être d'au moins 5 charatères"
+                    minlength: "Le mot de passe doit être d'au moins 5 charatères"
                 },
                 Courriel: "Veuillez Entrez une adresse courriel valide",
                 DateInsc : "Veuillez entrer une date",
-                Ville: "Veuillez entrer votre ville",
-                Adresse: "Veuillez entrer votre adresse",
-                Age:"Veuillez entrer vote age",
-                Codepostal:"Veuillez entrer votre code postal",
+                Ville: "Veuillez entrer une ville",
+                Adresse: "Veuillez entrer une adresse",
+                Age:"Veuillez entrer un âge",
+                Codepostal:"Veuillez entrer un code postal",
                 lstStatut:"Veuillez entrer le statut du client",
                 Entraineur:"Veuillez entrer le nom de famille de L'entraineur à lier au client",
-                Cell:"Veuillez entrer votre numéro de cellulaire",
-                Tel:"Veuillez entrer votre numéro de teléphone",
-                CodePostal:"Veuillez entrer votre code postal",
+                Cell:"Veuillez entrer un numéro de cellulaire",
+                Tel:"Veuillez entrer un numéro de teléphone",
+                CodePostal:"Veuillez entrer un code postal",
 
 
             }

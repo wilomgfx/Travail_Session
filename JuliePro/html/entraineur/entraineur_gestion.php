@@ -108,7 +108,7 @@ $entraineur = get_entraineur_by_userID($userID);
                 <form class ="grille_12" action="index.php" method="post">
                     <input type="hidden" value="obtenirRapport" name="action">
                     <input type="hidden" value="<?php echo $clientEnvoyer['clientID']; ?>" name="clientIDEnvoyer">
-                  <input type="submit" value="obtenirRapport">
+                    <input type="submit" value="Obtenir les Rapports">
                 </form>
             <?php endif; ?>
         </div>
@@ -172,7 +172,7 @@ $entraineur = get_entraineur_by_userID($userID);
                     <tr>
                         <td align="right">
                             Date inscription:
-                            <input type="date" name="DateInsc">
+                            <input type="date" name="DateInsc" placeholder="mm/ jj/ aaaa">
                         </td>
                     </tr>
 

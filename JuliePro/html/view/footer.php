@@ -22,6 +22,8 @@
                     <li><a href="../client">Profil</a></li>
                     <li><a href="../client/index.php?action=rapport">Mon programme</a></li>
                 <?php endif; ?>
+                <li><a href="#">Connecté en tant que : <?php echo $user['statut'];?></a> </li>
+                <li><a href="../index/logout.php">Déconnection</a></li>
             </ul>
         </nav>
 
