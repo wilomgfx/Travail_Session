@@ -7,3 +7,6 @@ table, th, td{
 input {
     background-color: #e0e0e0;
 }
+#currentClient{
+    color:#64c8ef;
+}

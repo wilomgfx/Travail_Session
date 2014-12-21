@@ -82,9 +82,6 @@ if($action == 'Inscrire')
     $password = $_POST['Password'];
     $statut = $_POST['Statut'];
     $Entraineur = $_POST['Entraineur'];
-    ajouter_utilisateur($username,$password,$statut);
-    $UtilisateurID = get_userID_by_username($username);
-    $EntraineurID = get_entraineurID_by_name($Entraineur);
 
     if (empty($Nom) || empty($Prenom) || empty($numTel) || empty($numTel) || empty($numCell) || empty($Adresse) || empty($Ville) || empty($CodePostal) ||
         empty($Age) || empty($DateInsc) || empty($Courriel) || empty($username) || empty($password) || empty($statut) || empty($Entraineur)) {
@@ -92,10 +89,14 @@ if($action == 'Inscrire')
     include('../errors/error.php');
     }else
     {
+     ajouter_utilisateur($username,$password,$statut);
+     $UtilisateurID = get_userID_by_username($username);
+     $EntraineurID = get_entraineurID_by_name($Entraineur);
     inscrire_client($Nom,$Prenom,$numTel,$numCell,$Adresse,$Ville,$CodePostal,$Age,$DateInsc,$Courriel,$UtilisateurID,$EntraineurID);
     //Pour montrer que le client est bien ajouté
     echo "<script type='text/javascript'>alert('Client : '+ '$Nom' + ' ajouté avec succès!')</script>";
-    include('entraineur_gestion.php');
+    header('Location: index.php?action=entraineur_gestion.php');
+    //include('entraineur_gestion.php');
     }
 }
 if($action == 'mesClients' )

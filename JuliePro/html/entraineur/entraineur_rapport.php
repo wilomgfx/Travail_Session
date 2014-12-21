@@ -3,12 +3,13 @@
 <?php
 $userID = get_userID_by_username($_SESSION['user']['username']);
 $client = $clientObtenu;
+$NomDuclientAuComplet = $client['nom'] .' '. $client['prenom'];
 $entraineur = get_entraineur_by_ID($client['FK_entraineurID']);
 $rapports = get_rapports_quotidiens_by_clientID($client['clientID']);
 $cpt = 0;
 ?>
 <div class="wrapper">
-    <h2>Rapports quotidiens</h2>
+    <h2>Rapports quotidiens du client :  <span id="currentClient"><?php echo $NomDuclientAuComplet ;?></span></h2>
     <form class="grille_12" action="." method="post">
         <table>
             <tr class="headerDeTable">
