@@ -28,3 +28,7 @@
 <?php if ($user['statut'] == 'super_admin') : ?>
     <?php header("Refresh: 3; URL=indexbase.php"); ?>
 <?php endif; ?>
+<?php if ($user['statut'] == '') : ?>
+    <?php echo"Il semble ne pas y avoir d'utilisateur lié à ce compte, veuillez contacter l'administrateur";?>
+    <?php header("Refresh: 3; URL=login_page.php"); ?>
+<?php endif; ?>

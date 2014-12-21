@@ -57,7 +57,7 @@ if($action =='add_entraineur')
 {
     $user = $_POST['User'];
     $password = $_POST['Password'];
-    $statut = $_POST['statut'];
+    $statut = $_POST['Statut'];
     $nom = $_POST['Nom'];
     $prenom = $_POST['Prenom'];
     $numTel = $_POST['Tel'];
@@ -71,10 +71,16 @@ if($action =='add_entraineur')
 
     // Validate the inputs
     if (empty($nom) || empty($prenom) || empty($numTel) || empty($numTel) || empty($numCell) || empty($Adresse) || empty($ville) || empty($codePostal) ||
-        empty($age) || empty($dateInscription) || empty($courriel)) {
+        empty($age) || empty($dateInscription) || empty($courriel) || empty($user) || empty($password) || empty($statut)){
         $error = "Invalid product data. Check all fields and try again.";
         include('../errors/error.php');
-    } else {
+    }
+    elseif(userNameExists($user))
+        {
+            $error="Le nom d'utilisateur est déjà utilisé, veuillez en utilisé un autre";
+            include('../errors/error.php');
+        }
+     else {
         $userID =  ajouter_utilisateur($user,$password,$statut);
         add_entraineur($nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$dateInscription ,$courriel,$userID);
 
@@ -86,7 +92,11 @@ if($action =='add_entraineur')
 if($action =="Supprimer")
 {
     $id_entraineur= $_POST['entraineurID'];
+    $entraineur = get_entraineur_by_ID($id_entraineur);
+    $fk_useridEntraineur= $entraineur['FK_utilisateurID'];
+    supprimer_utilisateur_by_userid($fk_useridEntraineur);
     supprimer_entraineur($id_entraineur);
+    echo "<script type='text/javascript'>alert('Entraineur suprimé avec succès!')</script>";
     header('Location: index.php?action=entraineur_add');
 }
 

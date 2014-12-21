@@ -52,7 +52,7 @@ $().ready(function() {
                 Adresse:{
                   required: true,
                 },
-                lstStatut:{
+                Statut:{
                     required:true,
                 },
                 Entraineur:{
@@ -77,7 +77,7 @@ $().ready(function() {
                 Adresse: "Veuillez entrer une adresse",
                 Age:"Veuillez entrer un âge",
                 Codepostal:"Veuillez entrer un code postal",
-                lstStatut:"Veuillez entrer le statut du client",
+                Statut:"Veuillez entrer le statut du client",
                 Entraineur:"Veuillez entrer le nom de famille de L'entraineur à lier au client",
                 Cell:"Veuillez entrer un numéro de cellulaire",
                 Tel:"Veuillez entrer un numéro de teléphone",

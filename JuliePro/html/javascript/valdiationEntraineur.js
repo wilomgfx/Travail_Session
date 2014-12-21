@@ -87,7 +87,7 @@ $().ready(function() {
     });
 
     // propose username by combining first- and lastname
-    $("#username").focus(function() {
+    $("#user").focus(function() {
         var firstname = $("#Prenom").val();
         var lastname = $("#Nom").val();
         if (firstname && lastname && !this.value) {

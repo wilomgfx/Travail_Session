@@ -5,7 +5,9 @@ if (session_status() == PHP_SESSION_NONE)
 $userID = get_userID_by_username($_SESSION['user']['username']);
 $entraineur = get_entraineur_by_userID($userID);
 ?>
-
+<script src="../javascript/jquery-2.1.1.js"></script>
+<script src="../javascript/jquery.validate.js"></script>
+<script src="../javascript/validationClient.js"></script>
     <!-- Section Consulter/Modifier Clients -->
     <section>
         <div class="wrapper">
@@ -118,75 +120,71 @@ $entraineur = get_entraineur_by_userID($userID);
     <section>
         <div class="wrapper">
             <h2>Inscrire un Client</h2>
-            <form class ="grille_12" action="index.php"  method="post">
+            <form class ="grille_12" action="index.php"  method="post" id="inscriptionClient">
                 <input type="hidden" value="Inscrire" name="action">
                 <table>
                     <tr>
-                        <td align="right">Username: <input type="text" name="Username"</td>
-                        <td align="right">Password: <input type="password" name="Password"</td>
-                        <td align="right"> Statut: <input type="text" name="LstStatut" value="utilisateur" readonly="readonly">
-
-                    </tr>
-                    <tr>
                         <td align="right">
                             Nom:
-                            <input type="text" name="Nom">
+                            <input type="text" name="Nom" id="Nom">
                         </td>
                         <td align="right">
-                            Prenom:
-                            <input type="text" name="Prenom">
+                            Prénom:
+                            <input type="text" name="Prenom" id="Prenom">
                         </td>
                     </tr>
+                    <tr>
+                        <td align="right">Nom d'usager:<input type="text" name="Username" id="username"</td>
+                        <td align="right">Mot de passe:<input type="password" name="Password" id="password"</td>
+                        <td align="right"> Statut: <input list="Statut" name="Statut" value="utilisateur" readonly id="Statut"></td>
+                    </tr>
+
                     <tr>
                         <td align="right">
                             No téléphone:
-                            <input type="text" name="Tel">
+                            <input type="text" name="Tel" id="Tel">
                         </td>
                         <td align="right">
                             No Cellulaire:
-                            <input type="text" name="Cell">
+                            <input type="text" name="Cell" id="Cell">
                         </td>
                     </tr>
                     <tr>
                         <td align="right">
                             Adresse:
-                            <input type="text" name="Adresse">
+                            <input type="text" name="Adresse" id="Adresse">
                         </td>
                         <td align="right">
                             Ville:
-                            <input type="text" name="Ville">
+                            <input type="text" name="Ville" id="Ville">
                         </td>
                         <td align="right">
                             Code Postal:
-                            <input type="text" name="CodePostal">
+                            <input type="text" name="CodePostal" id="CodePostal">
                         </td>
                     </tr>
-
                     <tr>
                         <td align="right">
-                            Age:
-                            <input type="number" name="Age">
+                            Âge:
+                            <input type="number" name="Age" id="Age">
                         </td>
                     </tr>
-
                     <tr>
                         <td align="right">
                             Date inscription:
-                            <input type="date" name="DateInsc" placeholder="mm/ jj/ aaaa">
+                            <input type="date" name="DateInsc" id="DateInsc" placeholder="aaaa / mm/ jj">
                         </td>
                     </tr>
-
                     <tr>
                         <td align="right">
                             Courriel:
-                            <input type="email" name="Courriel">
+                            <input type="email" name="Courriel" id="Courriel">
                         </td>
                     </tr>
-
                     <tr>
                         <td align="right">
                             Nom de famille de l'Entraineur:
-                            <input type="text" name="Entraineur" value="<?php echo $entraineur['nom'] ?>" readonly="readonly">
+                            <input type="text" name="Entraineur" id="Entraineur" value="<?php echo $entraineur['nom'];?>" readonly>
                         </td>
                     </tr>
                     <tr>
@@ -194,7 +192,7 @@ $entraineur = get_entraineur_by_userID($userID);
                             <input type="submit" value="Inscrire">
                         </td>
                     </tr>
-                </table>
+                    </table>
             </form>
 
         </div>

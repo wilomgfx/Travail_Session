@@ -46,27 +46,32 @@ if($action == 'Modifier')
 
     $Nom = $_POST['Nom'];
     $Prenom = $_POST['Prenom'];
-    $NoTel = $_POST['Tel'];
-    $NoCell = $_POST['Cell'];
+    $numTel = $_POST['Tel'];
+    $numCell = $_POST['Cell'];
     $Adresse = $_POST['Adresse'];
     $Ville = $_POST['Ville'];
     $CodePostal = $_POST['CodePostal'];
     $Age = $_POST['Age'];
     $Courriel = $_POST['Courriel'];
     $ClientID = $_POST['clientID'];
-
-    modifier_client($Nom,$Prenom, $NoTel,$NoCell,$Adresse,$Ville,$CodePostal,$Age,$Courriel,$ClientID);
+    if (empty($Nom) || empty($Prenom) || empty($numTel) || empty($numCell) || empty($Adresse) || empty($Ville) || empty($CodePostal) ||
+        empty($Age) || empty($Courriel)) {
+        $error = "Invalid product data. Check all fields and try again.";
+        include('../errors/error.php');
+    }else{
+    modifier_client($Nom,$Prenom, $numTel,$numCell,$Adresse,$Ville,$CodePostal,$Age,$Courriel,$ClientID);
     //Pour montrer que le client est bien modifié
     echo "<script type='text/javascript'>alert('Client : '+ '$Nom' + ' modifié avec succès!')</script>";
 
     include('entraineur_gestion.php');
+    }
 }
 if($action == 'Inscrire')
 {
     $Nom = $_POST['Nom'];
     $Prenom = $_POST['Prenom'];
-    $NoTel = $_POST['Tel'];
-    $NoCell = $_POST['Cell'];
+    $numTel = $_POST['Tel'];
+    $numCell = $_POST['Cell'];
     $Adresse = $_POST['Adresse'];
     $Ville = $_POST['Ville'];
     $CodePostal = $_POST['CodePostal'];
@@ -75,16 +80,23 @@ if($action == 'Inscrire')
     $Courriel = $_POST['Courriel'];
     $username = $_POST['Username'];
     $password = $_POST['Password'];
-    $statut = $_POST['LstStatut'];
+    $statut = $_POST['Statut'];
     $Entraineur = $_POST['Entraineur'];
     ajouter_utilisateur($username,$password,$statut);
     $UtilisateurID = get_userID_by_username($username);
     $EntraineurID = get_entraineurID_by_name($Entraineur);
 
-    inscrire_client($Nom,$Prenom,$NoTel,$NoCell,$Adresse,$Ville,$CodePostal,$Age,$DateInsc,$Courriel,$UtilisateurID,$EntraineurID);
+    if (empty($Nom) || empty($Prenom) || empty($numTel) || empty($numTel) || empty($numCell) || empty($Adresse) || empty($Ville) || empty($CodePostal) ||
+        empty($Age) || empty($DateInsc) || empty($Courriel) || empty($username) || empty($password) || empty($statut) || empty($Entraineur)) {
+    $error = "Invalid product data. Check all fields and try again.";
+    include('../errors/error.php');
+    }else
+    {
+    inscrire_client($Nom,$Prenom,$numTel,$numCell,$Adresse,$Ville,$CodePostal,$Age,$DateInsc,$Courriel,$UtilisateurID,$EntraineurID);
     //Pour montrer que le client est bien ajouté
     echo "<script type='text/javascript'>alert('Client : '+ '$Nom' + ' ajouté avec succès!')</script>";
     include('entraineur_gestion.php');
+    }
 }
 if($action == 'mesClients' )
 {

@@ -124,20 +124,21 @@
                 <input type="hidden" value="add_entraineur" name="action">
                 <table>
                     <tr>
-                        <td align="right">Nom d'usager: <input type="text" name="User"</td>
-                        <td align="right">Mot de passe: <input type="password" name="Password"</td>
-                        <td align="right"> Statut: <input list="lstStatut" name="lstStatut" id="statut" value="admin" readonly="readonly"></td>
-                    </tr>
-                    <tr>
                         <td align="right">
                             Nom:
-                            <input type="text" name="Nom">
+                            <input type="text" name="Nom" id="Nom">
                         </td>
                         <td align="right">
                             Prénom:
-                            <input type="text" name="Prenom">
+                            <input type="text" name="Prenom" id="Prenom">
                         </td>
                     </tr>
+                    <tr>
+                        <td align="right">Nom d'usager: <input type="text" name="User" id="user"</td>
+                        <td align="right">Mot de passe: <input type="password" name="Password" id="Password"</td>
+                        <td align="right"> Statut: <input list="Statut" name="Statut" id="Statut" value="admin" readonly="readonly"></td>
+                    </tr>
+
                     <tr>
                         <td align="right">
                             No téléphone:
@@ -173,7 +174,7 @@
                     <tr>
                         <td align="right">
                             Date inscription:
-                            <input type="date" name="DateInsc" placeholder="mm/ jj/ aaaa">
+                            <input type="date" name="DateInsc" placeholder="aaaa / mm/ jj">
                         </td>
                     </tr>
 

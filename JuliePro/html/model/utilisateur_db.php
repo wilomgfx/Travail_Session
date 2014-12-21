@@ -31,3 +31,19 @@ function get_userID_by_username($username)
 
     return $utilisateurID;
 }
+function userNameExists($username){
+    global $db;
+    $query ="Select * FROM utilisateur
+             where username = '$username'";
+    $utilisateur = $db->query($query);
+    $utilisateur =  $utilisateur->fetch();
+    if(!is_null($utilisateur))
+        return $utilisateur;
+}
+function supprimer_utilisateur_by_userid($userid)
+{
+    global $db;
+    $query ="DELETE FROM utilisateur WHERE utilisateurID = $userid";
+    $db->exec($query);
+    return;
+}

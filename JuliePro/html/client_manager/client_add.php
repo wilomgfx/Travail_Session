@@ -135,7 +135,7 @@
                 <tr>
                     <td align="right">Nom d'usager:<input type="text" name="Username" id="username"</td>
                     <td align="right">Mot de passe:<input type="password" name="Password" id="password"</td>
-                    <td align="right"> Statut: <input list="lstStatut" name="lstStatut" value="utilisateur" readonly="readonly" id="statut"></td>
+                    <td align="right"> Statut: <input list="Statut" name="Statut" value="utilisateur" readonly="readonly" id="Statut"></td>
                 </tr>
 
                  <tr>
@@ -171,7 +171,7 @@
                   <tr>
                      <td align="right">
                         Date inscription:
-                         <input type="date" name="DateInsc" id="DateInsc" placeholder="mm/ jj/ aaaa">
+                         <input type="date" name="DateInsc" id="DateInsc" placeholder="aaaa / mm/ jj">
                       </td>
                  </tr>
                  <tr>

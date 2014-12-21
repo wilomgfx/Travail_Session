@@ -62,28 +62,42 @@ if($action == 'Inscrire')
     $Courriel = $_POST['Courriel'];
     $username = $_POST['Username'];
     $password = $_POST['Password'];
-    $statut = $_POST['statut'];
+    $statut = $_POST['Statut'];
     $Entraineur = $_POST['Entraineur'];
-    ajouter_utilisateur($username,$password,$statut);
-    $UtilisateurID = get_userID_by_username($username);
-    $EntraineurID = get_entraineurID_by_name($Entraineur);
+   // ajouter_utilisateur($username,$password,$statut);
+    //$UtilisateurID = get_userID_by_username($username);
+    //$EntraineurID = get_entraineurID_by_name($Entraineur);
 // Validate the inputs
     if (empty($Nom) || empty($Prenom) || empty($NoTel) || empty($NoCell)|| empty($Adresse) || empty($Ville) || empty($CodePostal) ||
         empty($Age) || empty($DateInsc) || empty($Courriel) || empty($username) || empty($password) || empty($statut) || empty($Entraineur)) {
         $error = "Invalid product data. Check all fields and try again.";
         include('../errors/error.php');
-    } else {
+    }
+    elseif(userNameExists($username))
+    {
+        $error="Le nom d'utilisateur est déjà utilisé, veuillez en utiliser un autre";
+        include('../errors/error.php');
+    }
+    else {
+      $UtilisateurID = ajouter_utilisateur($username,$password,$statut);
+      $EntraineurID = get_entraineurID_by_name($Entraineur);
     inscrire_client($Nom,$Prenom,$NoTel,$NoCell,$Adresse,$Ville,$CodePostal,$Age,$DateInsc,$Courriel,$UtilisateurID,$EntraineurID);
     //Pour montrer que le client est bien ajouté
     echo "<script type='text/javascript'>alert('Client : '+ '$Nom' + ' ajouté avec succès!')</script>";
-    include('client_add.php');
+   //include('client_add.php');
+        header('Location: index.php?action=client_add');
     }
 }
 if($action =="Supprimer")
 {
     $IDclient = $_POST['clientID'];
+    $client =  get_client_by_ID($IDclient);
+    $fk_useridClient = $client['FK_utilisateurID'];
+    supprimer_utilisateur_by_userid($fk_useridClient);
     supprimer_client($IDclient);
-    include('client_add.php');
+    echo "<script type='text/javascript'>alert('Client suprimé avec succès!')</script>";
+    header('Location: index.php?action=client_add');
+    //include('client_add.php');
 }
 
 ?>
