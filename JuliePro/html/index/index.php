@@ -33,6 +33,13 @@ switch($action)
                 session_start();
             $_SESSION['user'] = array();
             $_SESSION['user'] = array('username' => $user['username'], 'password' => $user['password'], 'statut' => $user['statut']);
+
+        if ($user['statut'] == null)
+        {
+         $failed2 = 'true';
+         include('login_page.php');
+        }
+        else
             include('successful.php');
         }
         break;

@@ -1,4 +1,6 @@
 <head>
+    <meta charset="utf-8">
+    <title>Connection JuliePro</title>
     <link href="../css/grille-base.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/styleLogin.css">
@@ -26,6 +28,9 @@
     </div>
     <?php if (isset($failed)) : ?>
         <p id="erreur">Erreur: L'utilisateur ou le mot de passe est incorrect.</p>
+    <?php endif; ?>
+    <?php if (isset($failed2)) : ?>
+        <p id="erreur">Erreur: Le compte à été mal créé. Des informations sont maquantes pour permettre la connection. Veuillez contacter l'administrateur.</p>
     <?php endif; ?>
 </section>
 </body>
