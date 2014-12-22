@@ -47,7 +47,7 @@ if($action == 'Modifier'){
     }else{
         update_entraineur($nom, $prenom, $numTel,$numCell,$Adresse,$ville,$codePostal,$age,$courriel,$idEntraineur);
         echo "<script type='text/javascript'>alert('Entraineur : '+ '$nom' + ' modifié avec succès!')</script>";
-        include('../index/indexbase.php');
+        header('Location: index.php?action=entraineur_add');
     }
 
 

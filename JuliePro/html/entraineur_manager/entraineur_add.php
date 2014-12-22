@@ -50,11 +50,11 @@
                     <tr>
                         <td align="right">
                             No téléphone:
-                            <input type="text" name="tel" value="<?php echo $entraineur['numTel'] ;?>">
+                            <input type="text" name="tel" maxlength="13" value="<?php echo $entraineur['numTel'] ;?>">
                         </td>
                         <td align="right">
                             No Cellulaire:
-                            <input type="text" name="cell" value="<?php echo $entraineur['numCell'] ;?>">
+                            <input type="text" maxlength="13" name="cell" value="<?php echo $entraineur['numCell'] ;?>">
                         </td>
                     </tr>
                     <tr>
@@ -82,7 +82,7 @@
                     <tr>
                         <td align="right">
                             Date inscription:
-                            <input type="text" name="DateInsc" value="<?php echo $entraineur['dateInscription'] ;?>">
+                            <input type="date" name="DateInsc" value="<?php echo $entraineur['dateInscription'] ;?>">
                         </td>
                     </tr>
 

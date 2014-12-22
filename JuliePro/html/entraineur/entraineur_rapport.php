@@ -234,7 +234,7 @@ $cpt = 0;
                     <th>Entraineur</th>
                 </tr>
                 <tr>
-                    <td><input type="text" name="Date" placeholder="aaaa / mm/ jj:hh/mm"></td>
+                    <td><input type="datetime" name="Date" placeholder="aaaa / mm/ jj:hh/mm"></td>
                     <td><?php echo $entraineur['nom']; ?></td>
                     <td><input type="submit" value="Envoyer" name="NouveauxRendezVous"></td>
                 </tr>
